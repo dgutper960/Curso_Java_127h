@@ -1,9 +1,17 @@
 package HolaMundo;
 
-public class TiposPrimitivos {
+public class PrimitivosNumericos {
     /** para usar variables sin inicializar dentro de un método cualquiera */
-    // declaramos variable sin inicializar a nivel de clase
-    static boolean porDefecto;
+    /* declaramos variables sin inicializar a nivel de clase
+       como el método es estático, las variables también deberán serlo
+       además debemos cuidar siempre el apartado de la visibilidad */
+
+    static boolean porDefecto1;
+    static int porDefecto2;
+    static float porDefecto3;
+    static char porDefecto4;
+
+    // método main
     public static void main(String[] args) {
         /**
          * TIPO DE DATOS PRIMITIVOS
@@ -122,13 +130,16 @@ public class TiposPrimitivos {
         /**
          * HASTA EL MOMENTO HEMOS INICIALIZADO VARIABLES DENTRO DE UN MÉTODO (main)
          * --> Dentro de los métodos es obligatorio inicializar las variables
-         * --> Si queremos tomar ell valor por defecto de una variable (sin inicializar)
+         * --> Si queremos tomar el valor por defecto de una variable (sin inicializar)
          *     debemos declararla a de manera estática nivel de la clase (en este caso fuera del main)
          *     y luego ya la podemos usar por defecto dentro del método que queramos
          *     --> VEAMOS UN EJEMPLO:
          * */
-       // boolean porDefecto; --> esta sin inicializar y da error, la declaramos como static fuera del método main
-        System.out.println("\nTomando variable tipo boolean por defecto: \n"+porDefecto);
+       // Variables porDefecto; --> si están sin inicializar y dan error, la declaramos fuera a nivel de clase
+        System.out.println("\nTomando variable tipo boolean por defecto --> "+porDefecto1+
+                "\nTomando variable tipo int por defecto --> "+porDefecto2+
+                "\nTomando variable tipo float por defecto --> "+porDefecto3+
+                "\nTomando variable tipo char por defecto --> "+porDefecto4);
 
     }
 }
