@@ -4,7 +4,7 @@ public class Variables {
     public static void main(String[] args) {
         /** Las variables siguen las sig convenciones en Java:
          * 1. Empiezan por una letra minúscula, subrayado o símbolo de dólar.
-         * 2. Caracteres en Unicode.
+         * 2. Caracteres en Unicode, evitar caracteres especiales.
          * 3. No palabras reservadas.
          * 4. Nombre único en el mismo ámbito o bloque.
          * 5. Para más de una palabra uso de camelCase.
@@ -33,6 +33,18 @@ public class Variables {
         var doce = "doce";
 
         System.out.println(doce+" y "+trece);
+
+        /** Uso de variables en contexto de bloque */
+        // declaramos variables a nivel de main
+        String nombre = "Lucía";
+        int n = 14; // las variables deben ser inicializadas
+        // abrimos bloque if y podemos usar las variables del bloque de fuera
+        if (n > 12){ // si declaramos una variable en este bloque, solo será visible dentro del mismo
+            nombre = "Mara"; // una vez entra en una condición se hace un brake automático
+        } else if (n == 14) { // como se ha entrado al bloque anterior, el flujo no llega a este
+            nombre = "Caro";
+        }
+        System.out.println(nombre); // se imprime nombre según e resultado de la condicional
 
     }
 }
