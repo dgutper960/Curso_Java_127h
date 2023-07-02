@@ -3,6 +3,59 @@ package HolaMundo;
 public class ConversionDeTipos {
     public static void main(String[] args) {
 
+        /**
+         * VEAMOS LA CONVERSIÓN DE DATOS ENTRE PRIMITIVOS
+         * --> Es importante saber cuando deberemos asumir la pérdida de información
+         * */
+
+        /** ENTRE PRIMITIVOS NUMÉRICOS */
+        /** cuando pasamos de un tipo más pequeño a uno más grande, no hay problema */
+        int i = 10000;
+        long l = i;
+        System.out.println("l = " + l);
+        /** al pasar de uno grande a uno más pequeño, es posible que la información se trunque creando ambigüedad
+         * por ello, el compilador nos avisa de ese riesgo y debemos hacerlo mediante casting */
+        //short s = i; --> esto de por sí da error, ya que es posible exceder la memoria del short
+        // veamos la capacidad de short
+        short s1 = Short.MAX_VALUE;  // --> 32767
+        System.out.println("s1 = " + s1); // vemos que 10000 cabe perfectamente en un short
+        // por lo que en este caso podremos hacer el casting sin riesgos
+        short s = (short)i; // debemos hacer el casting, ya que i es de tipo int
+
+        /** En el caso de que no nos quede más remedio de convertir con truncado de información,
+         * mejor hacerlo manualmente, ya que si lo hace el compilador, lo puede poner en negativo */
+        int i1 = 32768; //excede la capacidad del short
+        short s2 = (short) i1; // hacemos el casting igualmente
+        System.out.println("s2 = " + s2); // se ha puesto el valor en negativo
+
+        //DECLARAMOS i1 (32768) COMO FLOAT
+        float f = i1; // no hay problema
+        System.out.println("f = " + f);
+
+        // veamos que ocurre si forzamos un truncado entre números reales
+        f = Float.MAX_VALUE; // 3.4028235E38
+        System.out.println("f = " + f);
+        System.out.println("veamos que ocurre si forzamos un truncado entre números reales");
+        double d = 46546846845867687167.35464684684604068684354136314354364354;
+        float f1 = (float) d; // --> f1 = 4.654685E19
+        System.out.println("d = " + d);
+        System.out.println("f1 = " + f1);
+
+
+        /** ENTRE ENTEROS Y CHAR */
+        byte b = 64; // lo convertimos a char con casting
+        char c = (char) b; // recordamos que cada unicode se representa con un entero
+        System.out.println("c = " + c); // en este caso c = 64 -- corresponde a --> @
+
+        /** NO PODEMOS PRETENDER CONVERTIR TIPOS INCOMPATIBLES */
+        boolean bol = true;
+        /** directamente daría error */
+//        int i3 = (int) bol;
+//        char c3 = (char) bol;
+
+
+        System.out.println("\n");
+
         /** CONVERSIÓN String --> int */
         String numString = "50";
         int numInt = Integer.parseInt(numString);
@@ -51,6 +104,8 @@ public class ConversionDeTipos {
         var booleano12 = Boolean.getBoolean(boolString2);
         System.out.println("booleano1 = " + booleano12);
 
+        System.out.println("\n");
+
         /**
          * VAMOS A INVERTIR EL PROCESO
          * POR LO QUE TOMAMOS UN PRIMITIVO Y LO CONVERTIMOS A STRING
@@ -80,20 +135,21 @@ public class ConversionDeTipos {
         String numDouble22Str = String.valueOf(numDouble22);
         System.out.println("numDouble22Str = " + numDouble22Str);
 
+        System.out.println("\n");
+
+        /** También lo podemos hacer poniendo directamente el valor*/
+
+        // valueOf()
+        String prueba = String.valueOf(58.365986e3f); // inicializamos String directamente con float
+        System.out.println("prueba = " + prueba);
+
+        // toString()
+        String prueba2 = Double.toString(48.36985325471e28);
+        System.out.println("prueba2 = " + prueba2);
+
         /**
-         * IGUALMENTE LO HARÍAMOS PARA CONVERTIR CUALQUIER TIPO DE PRIMITIVO
+         * IGUALMENTE LO HARÍAMOS PARA CONVERTIR CUALQUIER TIPO DE PRIMITIVO A STRING
          * */
-
-
-
-
-
-
-
-
-
-
-
 
 
     }
