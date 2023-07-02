@@ -59,5 +59,10 @@ public class InputOutputScanner {
             System.out.println("ERROR!!\nSolamente validos números enteros");
             main(args); // y volvemos a ejecutar el main
         }
+        /** Si no sabemos qu excepción debemos capturar, podemos capturar la excepción genérica,
+         * ya que todas heredan de la clase Excepcion
+         * ej.--> }catch (Exception e){
+         *          ... instrucciones ... }*/
+
     }
 }
