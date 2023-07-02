@@ -36,5 +36,56 @@ public class EjemploString {
 
         /** Cuando inicializamos una variable Strin, en realidad, por debajo se crea una instancia */
         String s1 = "Esto es un ejemplo de Cadena de Caracteres";
+
+        /** También lo podemos hacer mediante constructor con operador new y pasando el String como argumento */
+        String s2 = new String("Esto es un ejemplo de Cadena de Caracteres");
+
+        /** En Java cada objeto tiene su propio identificador indistintamente del valor  */
+        // Si comparamos los objetos mediante operador de igualdad nos compara por referencia
+        boolean esIgualRef = (s1 == s2 ); // son diferentes objetos con el mismo valor
+        System.out.println("esIgualRef = " + esIgualRef); // false
+
+        // Si comparamos con el método equals() nos compara por valor
+        boolean esIgualValor = s1.equals(s2); // se tiene en cuenta el CamelCase
+        System.out.println("esIgualValor = " + esIgualValor); // true
+
+        /** si queremos obviar el CamelCase usaremos .equalsIgnoreCase()  */
+        s2 = s2.toUpperCase();
+        esIgualValor = s1.equalsIgnoreCase(s2);
+        System.out.println("esIgualValor = " + esIgualValor); // true
+
+
+        /** Si tenemos dos instancias por literal con el mismo valor,
+         * Java, al crear la segunda usará la misma referencia para optimizar
+         * --ejemplo-->       */
+        String texto1 = "prueba";
+        String texto2 = "prueba";
+        esIgualRef = (texto1 == texto2); // true?
+        System.out.println("esIgualRef = " + esIgualRef); // true
+
+
+        /**
+         * VEAMOS UN EJEMPLO DE CONCATENACIÓN CON NUMÉRICOS Y OPERADORES
+         * */
+
+        // VARIABLES PARA EL EJEMPLO
+
+        int numA = 5;
+        int numB = 10;
+        String frase1 = "Vamos a concatenar con números '";
+        String frase2 = "' Esto es un ejemplo";
+
+        // concatenamos
+        System.out.println(frase1 + numA + numB + frase2); // --> numA y numB concatenan
+        // observamos que hay dos números unidos por un signo + ¿sumarán o concatenarán?
+        /** Cuando iniciamos una concatenación con un String el compilador interpreta
+         * que todo el contenido siguiente debe concatenar,
+         * --> Si queremos realizar operaciones lógicas, deben ir entre paréntesis */
+        System.out.println(frase1 +(numA+numB)+frase2); // --> numA y numB suman
+
+
+
+
+
     }
 }
