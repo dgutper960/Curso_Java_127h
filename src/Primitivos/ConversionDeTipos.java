@@ -1,4 +1,4 @@
-package HolaMundo;
+package Primitivos;
 
 public class ConversionDeTipos {
     public static void main(String[] args) {

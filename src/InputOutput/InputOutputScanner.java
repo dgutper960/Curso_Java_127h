@@ -1,7 +1,6 @@
 
-package HolaMundo;
+package InputOutput;
 
-import javax.swing.*;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

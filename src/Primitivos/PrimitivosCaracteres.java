@@ -1,4 +1,4 @@
-package HolaMundo;
+package Primitivos;
 
 public class PrimitivosCaracteres {
     public static void main(String[] args) {
@@ -37,15 +37,7 @@ public class PrimitivosCaracteres {
         System.out.println("Tamaño de char de bytes --> "+Character.BYTES);
         System.out.println("Tamaño de char de bites --> "+Character.SIZE);
         System.out.println("Valor mínimo --> "+Character.MIN_VALUE);
-        System.out.println("Valor máximo --> "+Character.MAX_VALUE);;
-
-
-
-
-
-
-
-
+        System.out.println("Valor máximo --> "+Character.MAX_VALUE);
 
     }
 }

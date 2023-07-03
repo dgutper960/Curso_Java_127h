@@ -1,4 +1,4 @@
-package HolaMundo;
+package Primitivos;
 
 public class SistemasNumericos {
     public static void main(String[] args) {
@@ -43,10 +43,6 @@ public class SistemasNumericos {
         /** Para declarar un hexadecimal:  */
         int numHexadecimal = 0x1f4; // prefijo 0x
         System.out.println(numHexadecimal);
-
-
-
-
 
     }
 }

@@ -1,4 +1,4 @@
-package HolaMundo;
+package InputOutput;
 
 import javax.swing.*;
 
@@ -20,7 +20,7 @@ public class InputOutputUsuario {
 	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
 	at java.base/java.lang.Integer.parseInt(Integer.java:665)
 	at java.base/java.lang.Integer.parseInt(Integer.java:781)
-	at HolaMundo.InputOutputUsuario.main(InputOutputUsuario.java:22)
+	at InputOutput.InputOutputUsuario.main(InputOutputUsuario.java:22)
         * */
         // Nuestro código estará dentro del bloque try para evitar otros errores o conflictos de visibilidad
         try {

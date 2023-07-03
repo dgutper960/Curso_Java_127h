@@ -1,4 +1,4 @@
-package HolaMundo;
+package Primitivos;
 
 public class PrimitivosBooleanos {
     public static void main(String[] args) {
@@ -23,10 +23,6 @@ public class PrimitivosBooleanos {
         /** VEAMOS OTRO EJEMPLO MÁS SENCILLO */
          boolean esIgual = (3-2) == 1;
         System.out.println("¿3 menos 2 es igual a 1? "+esIgual);
-
-
-
-
 
     }
 }

@@ -1,4 +1,4 @@
-package HolaMundo;
+package Primitivos;
 
 public class PrimitivosNumericos {
     /** para usar variables sin inicializar dentro de un método cualquiera */

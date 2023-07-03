@@ -1,4 +1,4 @@
-package HolaMundo;
+package ClaseString;
 
 public class RendimientoConcatenacion {
     public static void main(String[] args) {

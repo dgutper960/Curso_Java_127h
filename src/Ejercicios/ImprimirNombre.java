@@ -1,4 +1,4 @@
-package HolaMundo;
+package Ejercicios;
 
 public class ImprimirNombre {
     public static void main(String[] args) {
