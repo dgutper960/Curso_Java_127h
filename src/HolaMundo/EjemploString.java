@@ -74,18 +74,69 @@ public class EjemploString {
         int numB = 10;
         String frase1 = "Vamos a concatenar con números '";
         String frase2 = "' Esto es un ejemplo";
+        String lenguaje = "Java";
+        String nivel1 = "de cero";
+        String nivel2 = "experto";
+        String alumno = "David";
 
-        // concatenamos
+        // EJEMPLOS CONCATENACIÓN
+        // String + variables String
+        String curso = "Aprende "+lenguaje+" "+nivel1+" a "+nivel2;
+
+        // String + variables String y numéricas
         System.out.println(frase1 + numA + numB + frase2); // --> numA y numB concatenan
         // observamos que hay dos números unidos por un signo + ¿sumarán o concatenarán?
-        /** Cuando iniciamos una concatenación con un String el compilador interpreta
-         * que todo el contenido siguiente debe concatenar,
+        /** Cuando iniciamos una concatenación con un String, el compilador interpreta
+         * que el resto del contenido se debe concatenar, aunque sean números junto a operadores.
          * --> Si queremos realizar operaciones lógicas, deben ir entre paréntesis */
         System.out.println(frase1 +(numA+numB)+frase2); // --> numA y numB suman
 
 
+        // Función concat()
+        String anuncio = "APROVECHA LA OPORTUNIDAD!!\n ".concat(curso).concat(" con ").concat(alumno).concat("\n Adquiere ya este completo curso online");
+        System.out.println("anuncio =\n " + anuncio);
+
+        System.out.println("\n");
+
+        /**
+         *          DEBEMOS TENER EN CUENTA QUE
+         *
+         * --> Cada vez usamos el operador más para concatenar, por debajo se crea una instancia con esa funcionalidad
+         * --> Por lo tanto, es más eficiente el uso de la función .concat()
+         *
+         *          String Inmutable:
+         *    Los String nunca cambian una vez creados, solo se modifica su referencia en memoria
+         *
+         * */
+
+        /** Volvemos a imprimir todas nuestras variables y vemos que no se han modificado */
+
+        System.out.println("nivel1 = " + nivel1);
+        System.out.println("nivel2 = " + nivel2);
+        System.out.println("alumno = " + alumno);
+        System.out.println("curso = " + curso);
+
+        // Aunque usemos una función landa para modificar un String
+        String resultado = nivel1.transform(n ->{
+           return n + " a "+nivel2+" con "+alumno;
+        });
+        // Si nos damos cuenta, hemos usado una serie de String para formar otro
 
 
+        // Aunque usemos la función .replace()
+        String resultado2 = resultado.replace("a", "A");
+
+        /** SIEMPRE SON NUEVAS INSTANCIAS Y LOS STRING ORIGINALES MANTIENEN */
+        System.out.println("resultado = " + resultado);
+        System.out.println("resultado2 = " + resultado2);
+        System.out.println("nivel1 = " + nivel1);
+        System.out.println("nivel2 = " + nivel2);
+
+        // PROBAMOS A SOBREESCRIBIR
+        String texto3 = "Texto Original";
+        System.out.println("texto3 = " + texto3);
+        texto3 = "Texto Nuevo";
+        System.out.println("texto3 = " + texto3); // Ahora lo machaca
 
     }
 }
