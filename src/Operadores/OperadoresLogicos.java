@@ -58,8 +58,28 @@ public class OperadoresLogicos {
 
         /** PODEMOS USAR LOS PARÉNTESIS PARA CAMBIAR LA PRIORIDAD DEL AND SOBRE EL FALSE */
         /** ejemplo */
-        boolean b2 = true || true && false; // false
-        boolean b3 = true || false && false || true; // true
+        boolean b2 = true || true && false; // true
+        System.out.println("b2 = " + b2);
+        // por defecto equivale a esto
+        b2 = true || (true && false); // true
+        System.out.println("b2 = " + b2);
+        /** cambiamos la prioridad con el paréntesis */
+        b2 = (true || true) && false; //false
+        System.out.println("b2 = " + b2);
+
+
+        // otro ejemplo sería esto
+        boolean b3 = true || false && false || false; // true
+        System.out.println("true || false && false || false --> b3 = " + b3);
+        /** estos serían los pasos de evaluación */
+        // 1. true || (false && false) || false; // true
+        // 2. (true || (false && false)) || false; // true
+        // 3. ((true || (false && false)) || false); // true
+        /** cambiamos la prioridad con paréntesis */
+        b3 = ((true || false) && false) || false; // false
+        System.out.println("((true || false) && false) || false --> b3 = " + b3);
+
+        /** Es importante dominar este tema **/
 
 
         // comparación original que da true por el orden de prioridad del AND
