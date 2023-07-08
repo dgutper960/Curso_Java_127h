@@ -1,4 +1,4 @@
-package Ejercicios;
+package EjerciciosFALTAN_9_Y_10;
 
 public class ImprimirNombre {
     public static void main(String[] args) {

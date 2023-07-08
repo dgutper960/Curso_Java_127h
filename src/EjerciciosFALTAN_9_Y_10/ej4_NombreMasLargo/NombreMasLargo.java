@@ -1,4 +1,4 @@
-package Ejercicios.ej4_NombreMasLargo;
+package EjerciciosFALTAN_9_Y_10.ej4_NombreMasLargo;
 
 import javax.swing.*;
 
