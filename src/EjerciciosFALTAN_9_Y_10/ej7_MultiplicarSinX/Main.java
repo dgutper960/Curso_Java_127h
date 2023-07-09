@@ -18,6 +18,7 @@ public class Main {
         System.out.println("Ingrese el otro número entero");
         int num2 = inputNumeros.nextInt();
 
+        /** OJO aquí no recorremos un índice DEBEMOS EMPEZAR DESDE 1 */
         for (int i = 1; i <= num2; i++){
             num1 += num1;
             System.out.println(num1);
