@@ -29,4 +29,5 @@ public class EjemploTestRendimiento {
         /** Sacamos el resultado por consola */
         System.out.println("resultado = " + resultado);
     }
+
 }
