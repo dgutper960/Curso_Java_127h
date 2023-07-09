@@ -11,6 +11,7 @@ class Persona {
     }
 
     public String mostrarNombre(){
+
         return this.nombre; // al hacer esto la variable de la clase se activa
     }
 }
