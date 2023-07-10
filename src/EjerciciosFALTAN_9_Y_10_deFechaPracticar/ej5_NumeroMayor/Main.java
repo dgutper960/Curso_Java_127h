@@ -1,4 +1,4 @@
-package EjerciciosFALTAN_9_Y_10.ej5_NumeroMayor;
+package EjerciciosFALTAN_9_Y_10_deFechaPracticar.ej5_NumeroMayor;
 
 import java.util.Scanner;
 

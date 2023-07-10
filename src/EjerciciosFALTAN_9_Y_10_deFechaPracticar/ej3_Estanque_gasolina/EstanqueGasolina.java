@@ -1,4 +1,4 @@
-package EjerciciosFALTAN_9_Y_10.ej3_Estanque_gasolina;
+package EjerciciosFALTAN_9_Y_10_deFechaPracticar.ej3_Estanque_gasolina;
 
 import java.util.Scanner;
 

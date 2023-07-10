@@ -1,4 +1,4 @@
-package EjerciciosFALTAN_9_Y_10.ej3_OrdenarNumeros;
+package EjerciciosFALTAN_9_Y_10_deFechaPracticar.ej3_OrdenarNumeros;
 
 /**
  * El desafío es un programa que pida dos números y los muestre ordenados de mayor a menor.
