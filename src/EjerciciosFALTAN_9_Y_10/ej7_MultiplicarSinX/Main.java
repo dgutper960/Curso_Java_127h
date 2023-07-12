@@ -1,4 +1,4 @@
-package EjerciciosFALTAN_9_Y_10_deFechaPracticar.ej7_MultiplicarSinX;
+package EjerciciosFALTAN_9_Y_10.ej7_MultiplicarSinX;
 
 import java.util.Scanner;
 

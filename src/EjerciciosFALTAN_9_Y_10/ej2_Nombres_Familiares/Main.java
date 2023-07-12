@@ -1,4 +1,4 @@
-package EjerciciosFALTAN_9_Y_10_deFechaPracticar.ej2_Nombres_Familiares;
+package EjerciciosFALTAN_9_Y_10.ej2_Nombres_Familiares;
 
 import java.util.Scanner;
 

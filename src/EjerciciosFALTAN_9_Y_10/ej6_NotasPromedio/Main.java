@@ -1,4 +1,4 @@
-package EjerciciosFALTAN_9_Y_10_deFechaPracticar.ej6_NotasPromedio;
+package EjerciciosFALTAN_9_Y_10.ej6_NotasPromedio;
 
 import java.util.Scanner;
 

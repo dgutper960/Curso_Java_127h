@@ -1,4 +1,4 @@
-package EjerciciosFALTAN_9_Y_10_deFechaPracticar;
+package EjerciciosFALTAN_9_Y_10.EJEMPLOS;
 
 import java.util.Scanner;
 
