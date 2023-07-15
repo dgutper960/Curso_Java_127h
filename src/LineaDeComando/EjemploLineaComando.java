@@ -27,6 +27,7 @@ public class EjemploLineaComando {
          * 1. POSICIONARNOS EN LA RUTA DE NUESTRA CLASE
          * 2. COMANDO javac _nombreClase_.java
          * 3. DEBERÍA APARECER NUESTRO FICHERO EN BYTECODE _nombreClase_.class
+         * 4. COLOCANDO LA BANDERA '-encoding utf8' al final del comando evitamos errores de caracteres especiales
          * **/
 
         /**
@@ -38,7 +39,7 @@ public class EjemploLineaComando {
         //LOS COMENTARIOS DAN ERROR AL COMPILAR
         //AL EJECUTAR NOS MUESTRA EL MENSAJE:
         /**Error: no se ha encontrado o cargado la clase principal EjemploLineaComando**/
-        //INVESTIGAR COMO AÑADIR A PRODUCCIÓN
+        //INVESTIGAR RELACIÓN PRODUCCIÓN Y GITHUB
 
     }
 }
