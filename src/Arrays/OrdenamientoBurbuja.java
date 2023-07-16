@@ -1,5 +1,8 @@
 package Arrays;
 
+import java.util.Arrays;
+import java.util.Collections;
+
 public class OrdenamientoBurbuja {
     public static void main(String[] args) {
 
@@ -58,9 +61,7 @@ public class OrdenamientoBurbuja {
         Integer[] numeros = {23, 57, 278, 1, 11, 109, 34, 98, 123, 15};
         /** y hacemos lo mismo pero cambiando los tipos de datos  */
         max = numeros.length;
-
         for (int i = 0; i < max -1; i++){
-
             for (int j = 0; j <max2 -1 -i; j++){
                 if (numeros[j+1].compareTo(numeros[j])<0){
                     Integer auxiliar = numeros[j];
@@ -72,7 +73,7 @@ public class OrdenamientoBurbuja {
 
         /** 1. PARTIMOS DE UN TIPO DE PRIMITIVO **/
         int[] numeros2 = {23, 57, 278, 1, 11, 109, 34, 98, 123, 15};
-        /** y hacemos lo mismo pero cambiando los tipos de datos  */
+        /** y hacemos lo mismo pero cambiando los tipos de datos y un cast */
         max = numeros.length;
 
         for (int i = 0; i < max -1; i++){
@@ -87,9 +88,45 @@ public class OrdenamientoBurbuja {
             }
         }
 
+        /** USAMOS NUESTRO MÉTODO ESTÁTICO */
+        String[] verduras = {"Calabacín","Zanahoria", "Coliflor", "Berenjena", "Tomate", "Alcachofa", "Pimiento"};
 
+        ordenamientoBurbuja(verduras); // ORDENA ASCENDENTE, por el signo mayor en el if
+        //LO PODEMOS INVERTIR
+        Collections.reverse(Arrays.asList(verduras));
 
+        for (String verdura:verduras) {
+            System.out.println("verdura = " + verdura);
+        }
 
+        System.out.println();
+
+        Double[] decimales = {23.15, 98.02, 15.98, 1.35, 12.96, 31.13, 24.02, 5.56};
+
+        ordenamientoBurbuja(decimales);
+
+        for (Double decimal:decimales) {
+            System.out.println("decimal = " + decimal);
+        }
 
     }
+    /**
+     * VAMOS A IMPLEMENTAR UN MÉTODO ESTÁTICO
+     * QUE PUEDA SER USADO CON UN ARREGLO DE CUALQUIER TIPO
+     * **/
+    //TOMARA UN TIPO OBJET PARA QUE VALGA CUALQUIER ARREGLO DE OBJETOS
+    public static void ordenamientoBurbuja(Object[] arreglo){
+        int max = arreglo.length;
+        for (int i = 0; i < max -1; i++){
+            for (int j = 0; j <max -1 -i; j++){
+                if (((Comparable)arreglo[j]).compareTo(arreglo[j+1])>0){ /** SEGÚN ESTE SIGNO SERÁ ASC O DESC **/
+                    Object auxiliar = arreglo[j];
+                    arreglo[j] = arreglo[j+1];
+                    arreglo[j+1] = auxiliar;
+                }
+            }
+        }
+    }
+    /** LO PODEMOS USAR CON CUALQUIER ARRAY DE OBJETOS **/
+
 }
