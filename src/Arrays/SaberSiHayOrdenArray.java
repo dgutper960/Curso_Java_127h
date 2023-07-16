@@ -10,6 +10,8 @@ public class SaberSiHayOrdenArray {
         /** creamos nuestro array */
         int[] arreglo = {132,2,213,4,515,66,79,8,92};
 //        {9,8,7,6,5,4,3,2,1};
+//        {1,2,3,4,5,6,7,8,9}
+//        {1,1,1,1,1,1,1,1,1,1,1,1,1,1};
 //        {132,2,213,4,515,66,79,8,92};
 
         boolean ascendente = false, descendente = false;
@@ -21,16 +23,16 @@ public class SaberSiHayOrdenArray {
                 descendente = true;
             }
         }
-        if ((ascendente == true) && (descendente = false)){
+        if (ascendente == true && descendente == false){
             System.out.println("El array es ascendente");
         }
-        if ((descendente == true) && (ascendente = false)) {
+        if (descendente == true && ascendente == false) {
             System.out.println("El array es descendente");
         }
-        if ((ascendente == true) && (descendente == true)){
+        if (ascendente == true && descendente == true){
             System.out.println("El arreglo está desordenado");
         }
-        if ((ascendente == false)&&(descendente == false)){
+        if (ascendente == false && descendente == false){
             System.out.println("Todos los valores son iguales");
         }
 
