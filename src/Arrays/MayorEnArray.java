@@ -15,9 +15,7 @@ public class MayorEnArray {
         for (int n : numeros){
             n = (int) ((Math.random()*1000)+1);
             System.out.println("n = " + n);
-            if(n > mayor){
-                mayor = n;
-            }
+            mayor = mayor > n ? mayor : n;
         }
         System.out.println("El número mayor es " + mayor);
     }
