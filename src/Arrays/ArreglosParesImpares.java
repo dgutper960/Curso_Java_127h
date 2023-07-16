@@ -23,14 +23,13 @@ public class ArreglosParesImpares {
         }
         pares = new int[maxPares];
         impares = new  int[maxImpares];
-        int aux1 = 0;
-        int aux2 = 0;
+        int auxPar = 0;
+        int auxImpar = 0;
         for (int i = 0; i<maxArray; i++){
             if(array[i] % 2 == 0){
-                pares[aux1++] = array[i];
-            }
-            if (array[i] % 2 != 0){
-                impares[aux2++] = array[i];
+                pares[auxPar++] = array[i];
+            }else {
+                impares[auxImpar++] = array[i];
             }
         }
 
