@@ -41,5 +41,14 @@ public class EjemploArregloEnteros {
         System.out.println("k = " + numeros[numeros.length -2]);
         System.out.println("l = " + numeros[numeros.length -1]);  // length muestra el número de elementos
 
+        System.out.println("=== INVERTIMOS ===");
+
+        /** Recorremos con un for a la inversa */
+        int max = numeros.length -1; // quiero que llegue a 0 por lo que tengo que poner >=
+        // usamos a porque i, j... están cogidos
+        for (int a = max; a >=0 ; a--){
+            System.out.println("a = " + numeros[a]);
+        }
+
     }
 }

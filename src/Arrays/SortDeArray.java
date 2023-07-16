@@ -10,7 +10,7 @@ public class SortDeArray {
          * */
 
         /** Creamos un array de String con muchos productos */
-        String[] frutas = {"Melocotones", "Manzanas", "Peras", "Zandías", "Uvas", "Aguacates", "Limones", "Bananas"};
+        String[] frutas = {"Melocotones", "Manzanas", "Peras", "Zarzamora", "Uvas", "Aguacates", "Limones", "Bananas"};
 
         /** imprimimos */
         System.out.println("\nFrutas ordenadas por inserción:");
