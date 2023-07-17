@@ -1,4 +1,4 @@
-package Arreglos;
+package Arrays;
 
 import java.util.Scanner;
 

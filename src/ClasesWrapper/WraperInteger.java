@@ -1,7 +1,5 @@
 package ClasesWrapper;
 
-import Arreglos.IntroduccionArreglos;
-
 public class WraperInteger {
     public static void main(String[] args) {
 
