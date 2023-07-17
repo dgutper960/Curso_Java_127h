@@ -29,5 +29,9 @@ public class InsertarEnPosicionAdecuada {
         for (int n : array) {
             System.out.println("n = " + n);
         }
+        /**
+         * PARA PRACTICAR, INTENTAR LA CONDICIÓN CON UN WHILE
+         * HACERLO CON UN 2º ARRAY DE TAMAÑO MAYOR
+         * **/
     }
 }
