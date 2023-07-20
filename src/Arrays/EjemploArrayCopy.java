@@ -12,7 +12,9 @@ public class EjemploArrayCopy {
          * 4. Posición de inicio array salida
          * 5. número de índices a copiar
          *
-         * VAMOS A REPLICAR ALGUNOS EJERCICIOS ANTERIORES
+         * VAMOS A VER ALGUNOS EJEMPLOS DE USO
+         *
+         * -> SE RECOMIENDA REPLICAR LOS EJERCICIOS ANTERIORES <- ***
          * **/
 
         int[] array1 = {0,1,2,3,4,5,6,7,8,9,10};
