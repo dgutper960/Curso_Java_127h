@@ -152,6 +152,9 @@ public class Automovil {
     /** click derecho/generate/sobrecarga -> elegimos métodos de las clases padre **/
     @Override
     public boolean equals(Object obj) {
+        if (this == obj){
+            return true;
+        }
         if (!(obj instanceof Automovil)){ // PARA ASEGURARNOS QUE SOLO COMPARA OBJETOS DE TIPO AUTOMOVIL
             return false;
         }
