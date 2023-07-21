@@ -18,6 +18,14 @@ public class OperacionesFilasColumnas {
             }
         }
 
+        System.out.println("\nIMPRIMIMOS A\n");
+        for (int[] fila : a) {
+            for (int num : fila) {
+                System.out.print(num + "\t");
+            }
+            System.out.println();
+        }
+
         /** SUMAMOS LAS FILAS Y LAS COLUMNAS Y RELLENAMOS LAS MATRICES B Y C CON LOS RESULTADOS **/
         int sumaFila;
         int sumaColumna;
@@ -25,39 +33,30 @@ public class OperacionesFilasColumnas {
             sumaFila = 0; // NECESITAMOS REINICIAR VALORES EN CADA VUELTA
             sumaColumna = 0;
             for (int j = 0; j < a[i].length; j++) {
-                a[i][j] = 1 + numer.nextInt(10);
                 sumaFila += a[i][j];
                 sumaColumna += a[j][i];
                 b[i][j] = sumaFila;
-                c[i][j] = sumaColumna;
+                c[j][i] = sumaColumna;
             }
             System.out.println("La suma de la fila " + i + " es " + sumaFila);
             System.out.println("La suma de la columna " + i + " es " + sumaColumna);
 
+        }
 
-            System.out.println("\nIMPRIMIMOS A\n");
-            for (int[] fila : a) {
-                for (int num : fila) {
-                    System.out.print(num + "\t");
-                }
-                System.out.println();
+        System.out.println("\nIMPRIMIMOS B\n");
+        for (int[] fila : b) {
+            for (int num : fila) {
+                System.out.print(num + "\t");
             }
+            System.out.println();
+        }
 
-            System.out.println("\nIMPRIMIMOS B\n");
-            for (int[] fila : b) {
-                for (int num : fila) {
-                    System.out.print(num + "\t");
-                }
-                System.out.println();
+        System.out.println("\nIMPRIMIMOS C\n");
+        for (int[] fila : c) {
+            for (int num : fila) {
+                System.out.print(num + "\t");
             }
-
-            System.out.println("\nIMPRIMIMOS C\n");
-            for (int[] fila : c) {
-                for (int num : fila) {
-                    System.out.print(num + "\t");
-                }
-                System.out.println();
-            }
+            System.out.println();
         }
 
     }
