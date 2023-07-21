@@ -144,5 +144,21 @@ public class Automovil {
         return km/(this.capacidadDeposito*(porcentaje/100f));
     }
 
+    /**
+     * TODOS LOS OBJETOS HEREDAN DE OBJET
+     * POR LO QUE PODEMOS SOBRECARGAR UNO DE SUS MÉTODOS PARA USARLO COMO QUERAMOS
+     * **/
 
+    /** click derecho/generate/sobrecarga -> elegimos métodos de las clases padre **/
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Automovil)){ // PARA ASEGURARNOS QUE SOLO COMPARA OBJETOS DE TIPO AUTOMOVIL
+            return false;
+        }
+        Automovil a = (Automovil) obj; // debemos comparar dos objetos del mismo tipo
+        return (this.fabricante != null && this.modelo != null && //PARA EVITAR ERROR SI UNO DE LOS DOS ES NULL
+                this.fabricante.equalsIgnoreCase(a.getFabricante()) &&
+                this.modelo.equalsIgnoreCase(a.getModelo()));
+        // MODIFICAMOS EL MÉTODO PARA COMPARAR LA MARCA Y MODELO DE ESTA CLASE
+    }
 }

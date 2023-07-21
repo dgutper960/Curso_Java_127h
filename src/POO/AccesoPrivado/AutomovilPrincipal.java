@@ -1,6 +1,6 @@
 package POO.AccesoPrivado;
 
-public class PrincipalAutomovil {
+public class AutomovilPrincipal {
     public static void main(String[] args) {
 
         /**
