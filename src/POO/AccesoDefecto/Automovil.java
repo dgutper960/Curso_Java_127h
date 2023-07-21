@@ -1,4 +1,4 @@
-package POO;
+package POO.AccesoDefecto;
 
 import java.util.Locale;
 

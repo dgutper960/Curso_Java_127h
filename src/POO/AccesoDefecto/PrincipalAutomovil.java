@@ -1,4 +1,4 @@
-package POO;
+package POO.AccesoDefecto;
 
 public class PrincipalAutomovil {
     public static void main(String[] args) {

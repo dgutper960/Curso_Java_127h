@@ -32,7 +32,7 @@ public class Main {
  *
  * import java.util.Scanner;
  *
- * public class Main {
+ * public class CompararConEquals {
  *     public static void main(String[] args) {
  *
  *         Scanner inputNumeros = new Scanner(System.in);
