@@ -1,4 +1,4 @@
-package POO.Ejemplos.ParametrizarValores;
+package POO.Ejemplos.ParametrizarConEnum;
 
 public class CochesPSA {
     /**
@@ -14,6 +14,7 @@ public class CochesPSA {
      * --> El tipo de dato debe de ser la clase enum que hemos creado **/
     private MarcasPSA marca;
     private Color color = Color.BLANCO;
+    private TipoVehiculo tipo;
 
     public CochesPSA() {
     }
@@ -24,6 +25,17 @@ public class CochesPSA {
         this.color = color;
     }
 
+    public MarcasPSA getMarca() {
+        return marca;
+    }
+
+    public TipoVehiculo getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(TipoVehiculo tipo) {
+        this.tipo = tipo;
+    }
 
     public Color getColor() {
         return color;
@@ -36,6 +48,8 @@ public class CochesPSA {
     public void setMarca(MarcasPSA marca){
         this.marca = marca;
     }
+
+
 
     @Override
     public String toString() {

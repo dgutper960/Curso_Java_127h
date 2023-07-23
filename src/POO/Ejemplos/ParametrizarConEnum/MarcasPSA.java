@@ -1,4 +1,4 @@
-package POO.Ejemplos.ParametrizarValores;
+package POO.Ejemplos.ParametrizarConEnum;
 /**
  * UNA CLASE ENUM ES UNA COLECCIÓN DE VALORES CONSTANTES QUE PODEMOS USAR EN OTRA CLASE
  * */

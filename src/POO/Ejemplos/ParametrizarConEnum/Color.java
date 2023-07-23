@@ -1,4 +1,4 @@
-package POO.Ejemplos.ParametrizarValores;
+package POO.Ejemplos.ParametrizarConEnum;
 
 /** PODEMOS DAR VALORES PERSONALIZADOS A LAS CONSTANTES **/
 
