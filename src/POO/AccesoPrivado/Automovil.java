@@ -191,7 +191,7 @@ public class Automovil {
      * */
     @Override
     public String toString() {
-        return "Automovil{" +
+        return "Coche{" +
                 "fabricante='" + fabricante + '\'' +
                 ", modelo='" + modelo + '\'' +
                 ", color='" + color + '\'' +

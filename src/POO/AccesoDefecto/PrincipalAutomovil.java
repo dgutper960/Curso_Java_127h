@@ -8,7 +8,7 @@ public class PrincipalAutomovil {
          * */
 
         Automovil auto1 = new Automovil();
-        // en este momento, los datos no están inicializados en la clase Automovil
+        // en este momento, los datos no están inicializados en la clase Coche
         /** Como la visibilidad es por defecto, podemos acceder a los atributos de forma directa */
         System.out.println("Auto 1");
         auto1.fabricante = "Renault";
@@ -17,7 +17,7 @@ public class PrincipalAutomovil {
         auto1.cilindrada = 1.900;
         System.out.println("auto1.fabricante. = " + auto1.fabricante); // null
         System.out.println("auto1.modelo = " + auto1.modelo); // null
-        System.out.println("auto1.color = " + auto1.color); // en la clase Automovil lo hemos puesto verde
+        System.out.println("auto1.color = " + auto1.color); // en la clase Coche lo hemos puesto verde
         System.out.println("auto1.cilindrada = " + auto1.cilindrada); // null
 
         System.out.println("\nAuto 2");

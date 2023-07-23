@@ -25,7 +25,7 @@ public class ContextoStatic {
         System.out.println("coche2.getColorPatente() = " + coche2.getColorPatente()); // Púrpura
         
         /** Usamos el método estático de la clase */
-        System.out.println("Automovil.mediaConsumoStatic --> " +Automovil.mediaConsumoStatic(100, 60));
+        System.out.println("Coche.mediaConsumoStatic --> " +Automovil.mediaConsumoStatic(100, 60));
         // LOS MÉTODOS ESTÁTICOS ESTÁN DISEÑADOS PARA SER USADOS DESDE LA CLASE Y NO DESDE LAS INSTANCIAS, PERO SE PUEDE
         System.out.println("coche1.mediaConsumoStatic -->" + coche1.mediaConsumoStatic(100, 60));
         /** Iso incorrecto!! */ // SI USAMOS EL MÉTODO ESTÁTICO, VAMOS A TENER LOS MISMOS VALORES PARA TODAS LAS INSTANCIAS

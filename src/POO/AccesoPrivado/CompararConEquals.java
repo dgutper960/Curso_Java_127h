@@ -18,8 +18,8 @@ public class CompararConEquals {
         System.out.println("son iguales con .equals ? " + (nissan1.equals(nissan2))); // false
 
         /** RESULTA QUE EL EQUALS DE OBJECT HACE LO MISMO QUE ==
-         * POR ESO DEBEMOS SOBRECARGARLO EN LA CLASE  Automovil PARA USARLO A NUESTRO ANTOJO **/
-        //AHORA NUESTRO EQUALS PERSONALIZADO COMPARA LA MARCA Y MODELO DEL OBJETO Automovil
+         * POR ESO DEBEMOS SOBRECARGARLO EN LA CLASE  Coche PARA USARLO A NUESTRO ANTOJO **/
+        //AHORA NUESTRO EQUALS PERSONALIZADO COMPARA LA MARCA Y MODELO DEL OBJETO Coche
         System.out.println("son iguales con .equals ? " + (nissan1.equals(nissan2))); // TRUE
 
         /** Comparamos un objeto con otro que es null */

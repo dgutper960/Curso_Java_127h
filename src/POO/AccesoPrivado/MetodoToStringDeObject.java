@@ -4,7 +4,7 @@ public class MetodoToStringDeObject {
     public static void main(String[] args) {
 
         /**
-         * Creamos un objeto de la clase Automovil
+         * Creamos un objeto de la clase Coche
          * Si lo imprimimos directamente se llama de forma automática al método toString
          * **/
         Automovil peugeotTraveller = new Automovil("Peugeot", "Traveller");
@@ -16,13 +16,13 @@ public class MetodoToStringDeObject {
 
         /**
          * Como toString es un método de Object,
-         * podemos sobreescribirlo en la clase Automovil para personalizarlo a nuestro antojo
+         * podemos sobreescribirlo en la clase Coche para personalizarlo a nuestro antojo
          * --> Hemos definido uno con "generate" y ahora muestra todos los atributos del objeto
          * --> Podremos personalizar esta sobrecarga como queramos, pero solo podemos tener una
          * */
         System.out.println("peugeotTraveller = " + peugeotTraveller);
-        // resultado: Automovil{fabricante='Peugeot', modelo='Traveller', color='verde', cilindrada=0.0, capacidadDeposito=50}
-        /** Observamos que el resto de valores están por defecto de la Clase Automovil
+        // resultado: Coche{fabricante='Peugeot', modelo='Traveller', color='verde', cilindrada=0.0, capacidadDeposito=50}
+        /** Observamos que el resto de valores están por defecto de la Clase Coche
          * */
 
         /** --> Si deseamos otros toString en la clase

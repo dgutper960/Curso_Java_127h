@@ -6,13 +6,13 @@ public class AutomovilPrincipal {
         /**
          * PREVIAMENTE, HEMOS DEFINIDO ALGUNOS ATRIBUTOS EN AUTOMOVIL CON VISIBILIDAD POR DEFECTO
          * CAMBIAMOS SUS ATRIBUTOS A PRIVATE QUE ES LO RECOMENDADO
-         * --> Ya no podemos acceder de forma directa, necesitamos getters y setters (los definimos en Automovil)
+         * --> Ya no podemos acceder de forma directa, necesitamos getters y setters (los definimos en Coche)
          * --> Para acceder hacerlo mediante estos métodos (get = leer y set = cambiar)
          * */
 
         /** DEBEMOS ACCEDER CON SET PARA MODIFICAR */
         Automovil auto1 = new Automovil(); /** Este constructor es por defecto solo crea la instancia **/
-        // en este momento, los datos no están inicializados en la clase Automovil
+        // en este momento, los datos no están inicializados en la clase Coche
         System.out.println("Auto 1");
         auto1.setFabricante("Renault");
         auto1.setModelo("Laguna");
@@ -21,7 +21,7 @@ public class AutomovilPrincipal {
         /** DEBEMOS ACCEDER CON GET PARA LEER **/
         System.out.println("auto1.fabricante. = " + auto1.getFabricante()); // null
         System.out.println("auto1.modelo = " + auto1.getModelo()); // null
-        System.out.println("auto1.color = " + auto1.getColor()); // en la clase Automovil lo hemos puesto verde
+        System.out.println("auto1.color = " + auto1.getColor()); // en la clase Coche lo hemos puesto verde
         System.out.println("auto1.cilindrada = " + auto1.getCilindrada()); // null
 
         System.out.println("\nAuto 2");

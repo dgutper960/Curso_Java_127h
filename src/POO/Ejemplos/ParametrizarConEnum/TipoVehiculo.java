@@ -2,7 +2,7 @@ package POO.Ejemplos.ParametrizarConEnum;
 
 public enum TipoVehiculo {
     CUPE("Vehículo para sorteros", 3, "Ocio", 4),
-    FAMILIAR("Choce espacioso y confortable", 5, "Cargar niños y mandados", 7),
+    FAMILIAR("Coche espacioso y confortable", 5, "Cargar niños y mandados", 7),
     DEPORTIVO("Rápido y manejable", 2, "Coche para fardar", 2),
     FURGON("Espacioso adaptado a mercancias", 4, "Trabajo", 3);
 
