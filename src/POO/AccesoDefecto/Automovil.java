@@ -18,6 +18,8 @@ public class Automovil {
 
     int capacidadDeposito = 50;
 
+    static String colorPatente = "Azul";
+
 
     /** Implementamos métodos --> _modfAcceso_,_retorno_,_nombre_,_entrada()_**/
 
@@ -91,5 +93,6 @@ public class Automovil {
     /** SEGÚN EL PARÁMETRO DE ENTRADA ELEGIDO SE USARÁ UN MÉTODO O EL OTRO */
 
 
-
+    public Automovil() {
+    }
 }

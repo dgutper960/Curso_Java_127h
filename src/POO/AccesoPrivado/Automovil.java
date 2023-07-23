@@ -12,6 +12,9 @@ public class Automovil {
     // una vez declarados los atributos nos vamos al main y creamos objetos de la clase
 
     private int capacidadDeposito = 50;
+    private static int capDepositoStatic = 30;
+
+    private static String colorPatente = "Azul";
 
     /**
      * CUANDO IMPLEMENTAMOS UN CONSTRUCTOR,
@@ -83,6 +86,15 @@ public class Automovil {
         this.capacidadDeposito = capacidadDeposito;
     }
 
+    public static String getColorPatente(){
+        return colorPatente;
+    }
+
+    public static void setColorPatente(String colorPatente){
+        Automovil.colorPatente = colorPatente;
+        //NO PODEMOS USAR this, debemos usar la clase en si
+    }
+
     /**
      * AL PONER LOS ATRIBUTOS EN PRIVATE
      * DEBEMOS DEFINIR LOS GETTERS Y SETTERS
@@ -142,6 +154,14 @@ public class Automovil {
     public float mediaConsumo(int km, int porcentaje){ // requiere entrada en int ej.- 60
 
         return km/(this.capacidadDeposito*(porcentaje/100f));
+    }
+
+    /***
+     * SI TENGO UN MÉTODO ESTÁTICO, SOLO PODRÉ USAR ATRIBUTOS ESTÁTICOS
+     * **/
+    public static float mediaConsumoStatic(int km, int porcentaje){ // requiere entrada en int ej.- 60
+
+        return km/(Automovil.capDepositoStatic*(porcentaje/100f));
     }
 
     /**
