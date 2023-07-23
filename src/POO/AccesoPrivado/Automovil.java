@@ -149,6 +149,7 @@ public class Automovil {
      * POR LO QUE PODEMOS SOBRECARGAR UNO DE SUS MÉTODOS PARA USARLO COMO QUERAMOS
      * **/
 
+
     /** click derecho/generate/sobrecarga -> elegimos métodos de las clases padre **/
     @Override
     public boolean equals(Object obj) {
@@ -164,4 +165,32 @@ public class Automovil {
                 this.modelo.equalsIgnoreCase(a.getModelo()));
         // MODIFICAMOS EL MÉTODO PARA COMPARAR LA MARCA Y MODELO DE ESTA CLASE
     }
+
+    /**
+     * GRENERAMOS UNA SOBRECARGA DE toString (de Object) para que se muestren todos los atributos
+     * */
+    @Override
+    public String toString() {
+        return "Automovil{" +
+                "fabricante='" + fabricante + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", color='" + color + '\'' +
+                ", cilindrada=" + cilindrada +
+                ", capacidadDeposito=" + capacidadDeposito +
+                '}';
+    }
+
+    /**
+     * GRENERAMOS OTRO MÉTODO ALTERNATIVO DE toString PARA QUE MUESTRE SOLO fabricante y modelo
+     */
+
+    /**
+     * GRENERAMOS UN MÉTODO ALTERNATIVO PARA QUE SE MUESTRE SOLO LA MARCA Y MODELO
+     */
+    public String toString2() {
+        return fabricante + " " + modelo;
+    }
+    /** ESte método debe ser llamado de forma explícita */
+
+
 }
