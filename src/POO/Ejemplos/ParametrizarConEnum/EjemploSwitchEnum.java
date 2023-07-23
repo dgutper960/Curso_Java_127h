@@ -4,12 +4,12 @@ public class EjemploSwitchEnum {
     public static void main(String[] args) {
 
         /** Creamos un Coche */
-        CochesPSA citroen = new CochesPSA(MarcasPSA.CITROEN, Color.NEGRO);
+        CochesPSA citroen = new CochesPSA(MarcasPSA.CITROEN, Colores.NEGRO);
 
         /** preguntamos sobre un elemento tipo enum del coche (el color) **/
-        Color colorCoche = citroen.getColor();
+        Colores coloresCoche = citroen.getColor();
 
-        switch (colorCoche){
+        switch (coloresCoche){
             case AZUL -> System.out.println("El coche es de color del mar");
             case ROJO -> System.out.println("EL color de la pasión");
             case ROSA -> System.out.println("Infravalorado por los MachoMan de mierda");

@@ -3,21 +3,21 @@ package POO.Ejemplos.ParametrizarConEnum;
 public class Main {
     public static void main(String[] args) {
 
-        CochesPSA peugeot205 = new CochesPSA(MarcasPSA.PEUGEOT, Color.CELESTE);
-        CochesPSA opelCorsa = new CochesPSA(MarcasPSA.OPEL, Color.VIOLETA);
+        CochesPSA peugeot205 = new CochesPSA(MarcasPSA.PEUGEOT, Colores.CELESTE);
+        CochesPSA opelCorsa = new CochesPSA(MarcasPSA.OPEL, Colores.VIOLETA);
         opelCorsa.setTipo(TipoVehiculo.CUPE);
 
         CochesPSA ds = new CochesPSA();
-        ds.setColor(Color.VERDE);
+        ds.setColor(Colores.VERDE);
         ds.setMarca(MarcasPSA.DS);
         ds.setTipo(TipoVehiculo.FAMILIAR);
         
 
-        CochesPSA partner = new CochesPSA(MarcasPSA.PEUGEOT, Color.ROSA);
+        CochesPSA partner = new CochesPSA(MarcasPSA.PEUGEOT, Colores.ROSA);
         partner.setTipo(TipoVehiculo.FURGON);
 
         CochesPSA alpha = new CochesPSA();
-        alpha.setColor(Color.ROJO);
+        alpha.setColor(Colores.ROJO);
 
 
 

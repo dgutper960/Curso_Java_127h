@@ -13,16 +13,16 @@ public class CochesPSA {
      * PARA ELLO, DEBEMOS CREAR UNA CLASE DE TIPO Enum
      * --> El tipo de dato debe de ser la clase enum que hemos creado **/
     private MarcasPSA marca;
-    private Color color = Color.BLANCO;
+    private Colores colores = Colores.BLANCO;
     private TipoVehiculo tipo;
 
     public CochesPSA() {
     }
 
-    public CochesPSA(MarcasPSA marca, Color color) {
+    public CochesPSA(MarcasPSA marca, Colores colores) {
         this();
         this.marca = marca;
-        this.color = color;
+        this.colores = colores;
     }
 
     public MarcasPSA getMarca() {
@@ -37,12 +37,12 @@ public class CochesPSA {
         this.tipo = tipo;
     }
 
-    public Color getColor() {
-        return color;
+    public Colores getColor() {
+        return colores;
     }
 
-    public void setColor(Color color) {
-        this.color = color;
+    public void setColor(Colores colores) {
+        this.colores = colores;
     }
 
     public void setMarca(MarcasPSA marca){
@@ -56,7 +56,7 @@ public class CochesPSA {
         return "CochesPSA{" +
                 " grupo= " + GRUPO_EMPRESARIAL+
                 ", marca= " + marca.getMarca() + // TOMA EL VALOR DE ENUM
-                ", color= " + color.getColor() + // TOMA EL VALOR DE ENUM
+                ", colores= " + colores.getColor() + // TOMA EL VALOR DE ENUM
                  '}';
     }
 }

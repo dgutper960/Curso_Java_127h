@@ -2,7 +2,7 @@ package POO.Ejemplos.ParametrizarConEnum;
 
 /** PODEMOS DAR VALORES PERSONALIZADOS A LAS CONSTANTES **/
 
-public enum Color {
+public enum Colores {
     BLANCO("Blanco"),
     VERDE("Verde"),
     AZUL("Azul"),
@@ -14,7 +14,7 @@ public enum Color {
 
     private final String color;
 
-    Color(String color){
+    Colores(String color){
         this.color = color;
     }
 
