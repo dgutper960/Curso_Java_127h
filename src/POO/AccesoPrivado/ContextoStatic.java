@@ -27,7 +27,9 @@ public class ContextoStatic {
         /** Usamos el método estático de la clase */
         System.out.println("Automovil.mediaConsumoStatic --> " +Automovil.mediaConsumoStatic(100, 60));
         // LOS MÉTODOS ESTÁTICOS ESTÁN DISEÑADOS PARA SER USADOS DESDE LA CLASE Y NO DESDE LAS INSTANCIAS, PERO SE PUEDE
-        System.out.println("coche1.mediaConsumoStatic -->" + coche1.mediaConsumoStatic(100, 89));
+        System.out.println("coche1.mediaConsumoStatic -->" + coche1.mediaConsumoStatic(100, 60));
+        /** Iso incorrecto!! */ // SI USAMOS EL MÉTODO ESTÁTICO, VAMOS A TENER LOS MISMOS VALORES PARA TODAS LAS INSTANCIAS
+        /** Los métodos estáticos están pensados para ser usados sin instanciar la clase **/
         
         
 
