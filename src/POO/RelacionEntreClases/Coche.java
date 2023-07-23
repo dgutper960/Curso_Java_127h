@@ -2,38 +2,46 @@ package POO.RelacionEntreClases;
 
 public class Coche {
 
+    private int id;
+    private static int ultimo_id;
+
     private String marca;
     private String modelo;
-    private String color;
-    private double cilindrada;
-    // una vez declarados los atributos nos vamos al main y creamos objetos de la clase
 
-    private int capacidadDeposito = 50;
-    private static int capDepositoStatic = 30;
+    private Color color;
+    private Motor motor;
+    private Deposito deposito;
 
-    private static String colorPatente = "Azul";
+    private Rueda[] ruedas;
+
+    private Persona conductor;
 
     public Coche(){
-
+        this.id = ++ultimo_id;
     }
 
-    public Coche(String marca, String modelo) {
+    public Coche(String marca, String modelo, Color color) {
+        this();
         this.marca = marca;
         this.modelo = modelo;
-    }
-
-    public Coche(String marca, String modelo, String color, double cilindrada, int capacidadDeposito) {
-        this(marca, modelo); // USAMOS EL CONSTRUCTOR DE ARRIBA PARA OBTENER ESOS ATRIBUTOS
         this.color = color;
-        this.cilindrada = cilindrada;
-        this.capacidadDeposito = capacidadDeposito;
     }
 
+    public Coche(String marca, String modelo, Motor motor, Deposito deposito, Color color, Persona conductor, Rueda[] ruedas) {
+        this(marca, modelo, color);
+        this.motor = motor;
+        this.deposito = deposito;
+        this.conductor = conductor;
+        this.ruedas = ruedas;
+    }
+
+    public int getId(){
+        return id;
+    }
 
     public String getMarca() {
         return marca;
     }
-
 
     public void setMarca(String marca) {
         this.marca = marca;
@@ -47,63 +55,46 @@ public class Coche {
         this.modelo = modelo;
     }
 
-    public String getColor() {
+    public Motor getMotor() {
+        return motor;
+    }
+
+    public Rueda[] getRuedas() {
+        return ruedas;
+    }
+
+    public void setRuedas(Rueda[] ruedas) {
+        this.ruedas = ruedas;
+    }
+
+    public void setMotor(Motor motor) {
+        this.motor = motor;
+    }
+
+    public Deposito getDeposito() {
+        return deposito;
+    }
+
+    public void setDeposito(Deposito deposito) {
+        this.deposito = deposito;
+    }
+
+    public Color getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(Color color) {
         this.color = color;
     }
 
-    public double getCilindrada() {
-        return cilindrada;
+    public Persona getConductor() {
+        return conductor;
     }
 
-    public void setCilindrada(double cilindrada) {
-        this.cilindrada = cilindrada;
+    public void setConductor(Persona conductor) {
+        this.conductor = conductor;
     }
 
-    public int getCapacidadDeposito() {
-        return capacidadDeposito;
-    }
-
-    public void setCapacidadDeposito(int capacidadDeposito) {
-        this.capacidadDeposito = capacidadDeposito;
-    }
-
-    public static String getColorPatente(){
-        return colorPatente;
-    }
-
-    public static void setColorPatente(String colorPatente){
-        Coche.colorPatente = colorPatente;
-        //NO PODEMOS USAR this, debemos usar la clase en si
-    }
-
-
-    public void detalles(){
-        String color = "azul"; // como en la de abajo pone this esta variable no es usada (solo para el ejemplo)
-        System.out.println("auto2.fabricante = " + this.marca);
-        System.out.println("auto2.modelo = " + this.modelo);
-        System.out.println("auto2.color = " + this.color);
-        System.out.println("auto2.cilindrada = " + this.cilindrada);
-
-    }
-
-    public StringBuilder detallesMejorado(){
-        StringBuilder sb = new StringBuilder();
-        sb.append("auto2.fabricante = " + this.marca);
-        sb.append("\nauto2.modelo = " + this.modelo);
-        sb.append("\nauto2.color = " + this.color);
-        sb.append("\nauto2.cilindrada = " + this.cilindrada);
-
-        return sb;
-    }
-
-    public String marcaModelo(){
-        return "\nLa marca del auto es "+this.marca +"\nEl modelo es "+this.modelo;
-
-    }
 
     public String acelerar(int rpm){
         return "\nEl "+this.marca +" "+this.modelo+" acelerando a "+rpm+"rpm";
@@ -122,21 +113,28 @@ public class Coche {
 
 
 
-    public float mediaConsumo(int km, float porcentaje){ // requiere entrada en float ej.- 0.60f
+    public double mediaConsumo(int km, float porcentaje){ // requiere entrada en float ej.- 0.60f
 
-        return km/(this.capacidadDeposito*porcentaje);
+        return km/(this.deposito.getCapacidad()*porcentaje);
     }
 
-    public float mediaConsumo(int km, int porcentaje){ // requiere entrada en int ej.- 60
+    public double mediaConsumo(int km, int porcentaje){ // requiere entrada en int ej.- 60
 
-        return km/(this.capacidadDeposito*(porcentaje/100f));
+        return km/(this.deposito.getCapacidad()*(porcentaje/100f));
     }
 
-    public static float mediaConsumoStatic(int km, int porcentaje){ // requiere entrada en int ej.- 60
 
-        return km/(Coche.capDepositoStatic*(porcentaje/100f));
+    @Override
+    public String toString() {
+        return "Coche{" +
+                "marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", motor=" + motor +
+                ", deposito=" + deposito +
+                ", color=" + color +
+                ", conductor=" + conductor +
+                '}';
     }
-
 
     @Override
     public boolean equals(Object obj) {
@@ -152,21 +150,6 @@ public class Coche {
                 this.modelo.equalsIgnoreCase(a.getModelo()));
     }
 
-    @Override
-    public String toString() {
-        return "Coche{" +
-                "fabricante='" + marca + '\'' +
-                ", modelo='" + modelo + '\'' +
-                ", color='" + color + '\'' +
-                ", cilindrada=" + cilindrada +
-                ", capacidadDeposito=" + capacidadDeposito +
-                '}';
-    }
 
-
-    public String toString2() {
-
-        return marca + " " + modelo;
-    }
 
 }

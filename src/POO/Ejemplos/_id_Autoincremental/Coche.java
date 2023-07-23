@@ -11,6 +11,7 @@ public class Coche {
 
     /** DISEÑAMOS EL 1er CONSTRUCTOR PARA ASIGNAR E INCREMENTAR EL ID **/
     public Coche(){
+
         this.id = ++ultimo_id;
     }/** IMPRESCINDIBLE QUE LOS DEMÁS CONSTRUCTORES INVOQUEN ESTE OTRO */
     public Coche(String marca, String modelo) {
