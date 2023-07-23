@@ -33,12 +33,16 @@ public class CochesPSA {
         this.color = color;
     }
 
+    public void setMarca(MarcasPSA marca){
+        this.marca = marca;
+    }
+
     @Override
     public String toString() {
         return "CochesPSA{" +
                 " grupo= " + GRUPO_EMPRESARIAL+
-                ", marca= " + marca +
-                ", color= " + color +
-                '}';
+                ", marca= " + marca.getMarca() + // TOMA EL VALOR DE ENUM
+                ", color= " + color.getColor() + // TOMA EL VALOR DE ENUM
+                 '}';
     }
 }

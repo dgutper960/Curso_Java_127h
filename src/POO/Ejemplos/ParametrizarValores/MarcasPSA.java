@@ -20,4 +20,9 @@ public enum MarcasPSA {
     public String getMarca() {
         return marca;
     }
+
+    @Override
+    public String toString() {
+        return marca;
+    }
 }
