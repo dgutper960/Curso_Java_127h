@@ -64,6 +64,7 @@ public class Principal {
         mercedesG.setRuedas(ruedaMichelBig);
         System.out.println("mercedesG.getConductor() = " + mercedesG.getConductor());
         System.out.println(mercedesG.detallesRueda());
+        System.out.println("mercedesG.mediaConsumo(100, 90) = " + mercedesG.mediaConsumo(100, 90));
 
 
 
