@@ -19,11 +19,22 @@ public class Rueda {
         return marca;
     }
 
+
     public double getPulgadas() {
         return pulgadas;
     }
 
     public double getAncho() {
         return ancho;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Rueda{" +
+                "marca='" + marca + '\'' +
+                ", pulgadas=" + pulgadas +
+                ", ancho=" + ancho +
+                '}';
     }
 }

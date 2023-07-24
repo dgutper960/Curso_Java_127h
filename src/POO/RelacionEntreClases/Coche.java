@@ -126,13 +126,14 @@ public class Coche {
 
     @Override
     public String toString() {
-        return "Coche{" +
-                "marca='" + marca + '\'' +
-                ", modelo='" + modelo + '\'' +
-                ", motor=" + motor +
-                ", deposito=" + deposito +
-                ", color=" + color +
-                ", conductor=" + conductor +
+        return "Coche{ id " + id + '\n' +
+                "Marca = " + marca + '\n' +
+                "Modelo = " + modelo + '\n' +
+                "Motor = " + motor.getTipo() + '\n' +
+                "PotenciaCV = " + motor.getPotencia() + '\n' +
+                "Deposito = " + deposito.getCapacidad() + '\n' +
+                "Color = " + color + '\n' +
+                "Conductor = " + conductor + '\n' +
                 '}';
     }
 
@@ -148,6 +149,17 @@ public class Coche {
         return (this.marca != null && this.modelo != null &&
                 this.marca.equalsIgnoreCase(a.getMarca()) &&
                 this.modelo.equalsIgnoreCase(a.getModelo()));
+    }
+
+    public String detallesRueda() {
+        String detalle = null;
+        if (this.ruedas != null) {
+            for (Rueda r : this.ruedas) {
+                detalle = "Marca " + r.getMarca() + " / Diámetro " +
+                        r.getPulgadas() + "' / Ancho " + r.getAncho() + "cm";
+            }
+        }
+        return detalle;
     }
 
 

@@ -17,6 +17,8 @@ public class Deposito {
         return capacidad;
     }
 
+
+
     public void setCapacidad(double capacidad) {
         this.capacidad = capacidad;
     }
