@@ -2,7 +2,7 @@ package POO.ArrayDeObjetos;
 
 import POO.RelacionEntreClases.Rueda;
 
-public class Coche {
+public class Coche implements Comparable<Coche>{
 
     private int id;
     private static int ultimo_id;
@@ -97,6 +97,9 @@ public class Coche {
         this.conductor = conductor;
     }
 
+    public static int getUltimo_id() {
+        return ultimo_id;
+    }
 
     public String acelerar(int rpm){
         return "\nEl "+this.marca +" "+this.modelo+" acelerando a "+rpm+"rpm";
@@ -131,9 +134,6 @@ public class Coche {
         return "Coche{ id " + id + '\n' +
                 "Marca = " + marca + '\n' +
                 "Modelo = " + modelo + '\n' +
-                "Motor = " + motor.getTipo() + '\n' +
-                "PotenciaCV = " + motor.getPotencia() + '\n' +
-                "Deposito = " + deposito.getCapacidad() + '\n' +
                 "Color = " + color + '\n' +
                 "Conductor = " + conductor + '\n' +
                 '}';
@@ -164,6 +164,27 @@ public class Coche {
         return detalle;
     }
 
+
+    /***
+     * MÉTODO COMPARETO DEBEMOS ADAPTARLO A LO QUE QUEREMOS HACER
+     * --> Haremos cast con el tipo de objeto en el argumento
+     * --> Modificamos el retorno para que compare y ordene por marca
+     * --> Según lo pongamos implementaremos el orden natural de los objetos Coche
+     * **/
+//    @Override
+//    public int compareTo(Object o) {
+//        Coche a = (Coche) o;
+//        return this.marca.compareTo(a.marca);
+//    }
+    /***
+     * PARA EVITAR EL CAST
+     * PONEMOS LA CLASE ENTRE MAYOR Y MENOR
+     * EN Implement
+     * **/
+    @Override
+    public int compareTo(Coche o) {
+        return this.marca.compareTo(o.marca);
+    }
 
 
 }
