@@ -29,6 +29,21 @@ public class EjemploOrdenes {
         orden3.addProducto(new Producto("Pilot", "Color Azul", 1.95));
         orden3.addProducto(new Producto("Pilot", "Color Rojo", 1.95));
 
+        /** HACEMOS UN ARRAY DE OrdenCompra y metemos las compras **/
+        OrdenCompra[] ordenes = {orden1, orden2, orden3};
+        for (OrdenCompra orden: ordenes) {
+            System.out.println("Orden id " + orden.getId());
+            System.out.println("Cliente " + orden.getCliente());
+            System.out.println("Descripción " + orden.getDescripcion());
+            System.out.println("Fecha " + orden.getFecha());
+            System.out.println("Total " + orden.granTotal());
 
+            int i = 1;
+            for (Producto p : orden.getProductos()) {
+                System.out.println("Producto " + i + ": " + p.getNombre() + " " + p.getFabricante() + " precio " + p.getPrecio()+"€");
+                i++;
+            }
+            System.out.println("---------------------------------- siguiente --------------------------------------");
+        }
     }
 }

@@ -17,6 +17,7 @@ public class OrdenCompra {
     public OrdenCompra(String descripcion) {
         this.id = ultimo_id++;
         this.descripcion = descripcion;
+        this.productos = new Producto[4];
     }
 
     public int getId() {
@@ -31,7 +32,7 @@ public class OrdenCompra {
         return descripcion;
     }
 
-    public Date getFecha(Date date) {
+    public Date getFecha() {
         return fecha;
     }
 
@@ -51,15 +52,15 @@ public class OrdenCompra {
         this.cliente = cliente;
     }
 
-    public void addProducto(Producto productos) {
+    public void addProducto(Producto producto) {
         if (indiceProducto < this.productos.length) {
-            this.productos[indiceProducto++] = productos;
+            this.productos[indiceProducto++] = producto;
         }
     }
 
-    public double granTotal(Producto[] productos) {
+    public double granTotal() {
         double precioTotal = 0;
-        for (Producto producto : productos) {
+        for (Producto producto : this.productos) {
             precioTotal += producto.getPrecio();
         }
         return precioTotal;
