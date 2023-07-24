@@ -3,7 +3,7 @@ package POO.ArrayDeObjetos;
 public enum TipoCoche {
     FAMILIAR("Familiar", "Coche ideal para multitud de usos", 7),
     DEPORTIVO("Deportivo", "Para gente la tiene pequeña", 2),
-    SUB("SUB", "Parece un todoterreno pero no lo es", 5),
+    SUV("SUV", "Parece un todoterreno pero no lo es", 5),
     CUPE("Cupé", "Ideal para personas que no se complican la vida", 5),
     FURGONETA("Furgoneta", "Para el trabajo o para camperizar, tu decides", 9),
     TODOTERRENO("Todo terreno", "Si te gusta la aventura o el medio rural", 5);
