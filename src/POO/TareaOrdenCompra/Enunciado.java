@@ -9,7 +9,8 @@ public class Enunciado {
      *     descripcion String,
      *     fecha tipo Date,
      *     cliente del tipo Cliente
-     *     un atributo de tipo arreglo de productos con 4 elementos: Producto[] productos.
+     *     un atributo de tipo arreglo de productos con 4 elementos:
+     *     Producto[] productos.
      *
      *     En la clase OrdenCompra, crear constructor que inicialice solo la descripción.
      *
@@ -21,24 +22,33 @@ public class Enunciado {
      *     sólo se pueden agregar usando el método public void addProducto (Producto producto),
      *     es decir no se pueden agregar en el constructor ni en métodos setter.
      *
-     *     La clase OrdenCompra debe tener un método que devuelva el gran total, sumando los precios de los productos.
+     *     La clase OrdenCompra debe tener un método
+     *     que devuelva el gran total, sumando los precios de los productos.
      *
      *     Crear la clase Producto con tres atributos
      *     fabricante tipo String
      *     nombre String
      *     precio int,
-     *     inicializar todos sus valores en el constructor e implementar sus respectivos métodos getter.
+     *     inicializar todos sus valores en el constructor
+     *     e implementar sus respectivos métodos getter.
      *
-     *     Crear la clase Cliente con dos atributos nombre y apellido,
-     *     inicializar todos sus valores en el constructor e implementar sus respectivos métodos getter.
+     *     Crear la clase Cliente
+     *     con dos atributos nombre y apellido,
+     *     inicializar todos sus valores en el constructor
+     *     e implementar sus respectivos métodos getter.
      *
      *     Escribir un programa, clase con método main, la cual llamaremos EjemploOrdenes:
      *
-     *         Crear tres órdenes, con sus respectivos valores, el cliente, agregar los cuatro productos a cada una,
+     *         Crear tres órdenes, con sus respectivos valores, el cliente,
+     *         agregar los cuatro productos a cada una,
      *         cada orden con distintos productos, que no se repitan.
      *
-     *         Para cada una imprimir sus valores en consola usando método getter incluyendo los productos,
-     *         donde con el método getter obtenemos el arreglo de productos y con un foreach recorremos e imprimimos sus atributos fabricante, nombre y precio. Tener en cuenta en la salida el gran total de cada orden, los clientes, todo.
+     *         Para cada una imprimir sus valores en consola usando método getter
+     *         incluyendo los productos,
+     *         donde con el método getter obtenemos el arreglo de productos
+     *         y con un foreach recorremos e imprimimos sus atributos:
+     *         fabricante, nombre y precio.
+     *         Tener en cuenta en la salida el gran total de cada orden, los clientes.
      *
      * */
 }
