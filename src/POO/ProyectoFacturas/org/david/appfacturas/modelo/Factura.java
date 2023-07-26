@@ -74,11 +74,8 @@ public class Factura {
 
     public float calcularPrecioTotal(){
         float total = 0.0f;
-        for (LineasFactura linea: this.linea){
-            if(this.linea != null){
-                continue;
-            }
-            total += linea.calcularImporte();
+        for (int i = 0; i< this.indiceLinea; i++){
+            total += this.linea[i].calcularImporte();
         }
         return total;
     }
@@ -97,10 +94,9 @@ public class Factura {
                 .append(this.descripcion)
                 .append("\n");
         //IMPRIMIMOS LOS DETALLES DE CADA LÍNEA
-        for (LineasFactura linea : this.linea) {
-            if (linea != null) {
-                sb.append(linea);
-            }
+        for (int i = 0; i< this.indiceLinea; i++) {
+            sb.append(this.linea[i].toString())
+                    .append("\n");
         }
         sb.append("\nTotal Importe Factura\n")
                 .append("\t")

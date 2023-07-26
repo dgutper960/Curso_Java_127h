@@ -32,7 +32,7 @@ public class LineasFactura {
 
     @Override
     public String toString() {
-        return  "\n"+producto +
+        return  "\n"+producto.toString() +
                 "\nCantidad "+cantidad +
                 "\nImporte total "+ calcularImporte();
     }
