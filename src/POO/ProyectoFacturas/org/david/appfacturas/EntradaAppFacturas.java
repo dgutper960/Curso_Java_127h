@@ -54,7 +54,7 @@ public class EntradaAppFacturas {
             input.nextLine();
         } // UNA VEZ TERMINADO EL FOR, MOSTRAMOS LOS DETALLES DE LA FACTURA
 
-        System.out.println(factura.generarDetallesFactura());
+        System.out.println(factura);
 
     }
 }

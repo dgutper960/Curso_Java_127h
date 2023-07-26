@@ -27,12 +27,12 @@ public class LineasFactura {
     }
 
     public float calcularImporte(){
-        return this.cantidad * this.producto.getPrecio();
+        return (float) this.cantidad * this.producto.getPrecio();
     }
 
     @Override
     public String toString() {
-        return  "Producto "+producto +
+        return  "\n"+producto +
                 "\nCantidad "+cantidad +
                 "\nImporte total "+ calcularImporte();
     }

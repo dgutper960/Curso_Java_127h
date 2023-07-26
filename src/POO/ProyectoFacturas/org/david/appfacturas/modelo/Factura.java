@@ -102,10 +102,15 @@ public class Factura {
                 sb.append(linea);
             }
         }
-        sb.append("Total Importe Factura\n")
+        sb.append("\nTotal Importe Factura\n")
                 .append("\t")
                 .append(calcularPrecioTotal())
                 .append("€");
         return sb.toString();
+    }
+
+    @Override
+    public String toString() {
+        return generarDetallesFactura();
     }
 }
