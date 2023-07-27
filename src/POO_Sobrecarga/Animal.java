@@ -4,41 +4,48 @@ package POO_Sobrecarga;
 public class Animal {
     /** creamos algunos atributos de animal **/
 
-    private String nombreAnimal;
+    private String tipoAnimal;
     private int numPatas;
     private boolean pelaje;
     private boolean domestico;
+
+    public Animal() {
+
+    }
 
     /** CREAMOS UN MÉTODO PARA ANIMAL **/
     public String saludar(){
         return "..sonido por definir..";
     }
 
-    public Animal() {
+    /** PODEMOS REUTILIZAR EL toString de super en las extends **/
+    @Override
+    public String toString() {
+        return "\nTipoAnimal " + tipoAnimal +
+                "\nNumPatas " + numPatas +
+                "\nPelaje " + pelaje +
+                "\nDomestico " + domestico;
     }
 
-    public Animal(String nombreAnimal, int numPatas) {
-        this.nombreAnimal = nombreAnimal;
+
+    public Animal(String tipoAnimal, int numPatas) {
+        this.tipoAnimal = tipoAnimal;
         this.numPatas = numPatas;
     }
 
-    public Animal(String nombreAnimal, boolean domestico) {
-        this();
-        this.domestico = domestico;
-    }
-
-    public Animal(String nombreAnimal, int numPatas, boolean pelaje, boolean domestico) {
-        this(nombreAnimal, numPatas);
+    public Animal(String tipoAnimal, int numPatas, boolean pelaje) {
+        this(tipoAnimal, numPatas);
         this.pelaje = pelaje;
-        this.domestico = domestico;
     }
 
-    public String getNombreAnimal() {
-        return nombreAnimal;
+
+
+    public String getTipoAnimal() {
+        return tipoAnimal;
     }
 
-    public void setNombreAnimal(String nombreAnimal) {
-        this.nombreAnimal = nombreAnimal;
+    public void setTipoAnimal(String tipoAnimal) {
+        this.tipoAnimal = tipoAnimal;
     }
 
     public int getNumPatas() {
@@ -64,6 +71,5 @@ public class Animal {
     public void setDomestico(boolean domestico) {
         this.domestico = domestico;
     }
-
 
 }

@@ -5,9 +5,15 @@ public class Main {
 
         /** Creamos un animal, un perro, un gato, un pastor aleman y saludamos **/
         Animal animal = new Animal();
-        Perro perro = new Perro("Perro", 4, true, true, "Bobby");
+        Perro perro = new Perro("Perro", 4, true, "Bobby");
         Gato gato = new Gato();
         PastorAleman pastor = new PastorAleman("Richard");
+        pastor.setDomestico(true);
+        pastor.setPelaje(true);
+        pastor.setTipoAnimal("Perro");
+        pastor.setColor("Pardo y negro");
+        pastor.setNumPatas(4);
+        pastor.setNombrePerro("Toby");
 
         System.out.println("animal.saludar() = " + animal.saludar());
 
@@ -17,6 +23,10 @@ public class Main {
         System.out.println("saludoPerro = " + saludoPerro);
 
         System.out.println("pastor.saludar() = " + pastor.saludar());
+
+        System.out.println();
+
+        System.out.println("pastor = " + pastor);
 
 
     }

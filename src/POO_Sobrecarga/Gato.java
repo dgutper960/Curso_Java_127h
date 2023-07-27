@@ -18,12 +18,6 @@ public class Gato extends Animal{
     public Gato() {
     }
 
-    public Gato(String nombreAnimal, boolean domestico, String nombreGato, String raza) {
-        super(nombreAnimal, domestico);
-        this.setDomestico(true);
-        this.nombreGato = nombreGato;
-        this.raza = raza;
-    }
 
     public String getNombreGato() {
         return nombreGato;

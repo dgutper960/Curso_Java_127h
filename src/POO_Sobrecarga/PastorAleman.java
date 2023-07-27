@@ -10,6 +10,16 @@ public class PastorAleman extends Perro{
                 "\tSoy un Pastor Alemán y mi dueño se llama "+this.nombreAmo;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() +
+                "\nNombreAmo " + nombreAmo;
+    }
+
+    /*** Usamos el toString de perro que a la vez contiene el de animal **/
+
+
+
     public PastorAleman(String nombreAmo) {
         this.nombreAmo = nombreAmo;
     }

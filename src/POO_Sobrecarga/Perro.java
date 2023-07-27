@@ -4,19 +4,27 @@ public class Perro extends Animal{
     String nombrePerro;
     String color;
 
+    /** Sobrecarga método saludar ***/
     @Override
     public String saludar() {
         return "¡¡Guauuu!!";
     }
 
-    /** Sobrecarga método sonido ***/
+
+    /** USAMOS EL toString de Animal y concatenamos **/
+    @Override
+    public String toString() {
+        return super.toString() +
+                "\nNombrePerro " + nombrePerro +
+                "\nColor " + color;
+    }
 
 
     public Perro() {
     }
 
-    public Perro(String nombreAnimal, int numPatas, boolean pelaje, boolean domestico, String nombrePerro) {
-        super(nombreAnimal, numPatas, pelaje, domestico);
+    public Perro(String nombreAnimal, int numPatas, boolean pelaje, String nombrePerro) {
+        super(nombreAnimal, numPatas, pelaje);
         this.nombrePerro = nombrePerro;
         this.setDomestico(true);
     }
