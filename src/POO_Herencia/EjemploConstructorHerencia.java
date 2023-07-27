@@ -40,12 +40,18 @@ public class EjemploConstructorHerencia {
         alumInt1.setNotasMatematicas(9.6);
         alumInt1.setNotasHistoria(7.4);
 
+        Profesor prof1 = new Profesor("David", "Gutiérrez Pérez", 42, "LMSGI/PROG");
+
         System.out.println("================================");
         imprimirDetalles(persona1);
         System.out.println("================================");
         imprimirDetalles(alumno1);
         System.out.println("================================");
         imprimirDetalles(alumInt1);
+        System.out.println("================================");
+        imprimirDetalles(prof1);
+        System.out.println("================================");
+
 
 
     }
