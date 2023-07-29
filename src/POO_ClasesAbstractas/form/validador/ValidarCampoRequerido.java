@@ -18,7 +18,7 @@ public class ValidarCampoRequerido extends Validador{
     // 1º validar que no sea null, evitamos el NullPointException
     // 2º validar que tenga longitud
     @Override
-    boolean esValido(String valor) {
+    public boolean esValido(String valor) {
         return (valor != null && valor.length() > 0); // podríamos negar el .isEmpty o el .isBlank
     }
 }

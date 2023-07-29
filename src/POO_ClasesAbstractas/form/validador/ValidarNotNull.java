@@ -18,7 +18,7 @@ public class ValidarNotNull extends Validador{
 
     // valida que el parámetro de entrada no sea nulo
     @Override
-    boolean esValido(String valor) {
+    public boolean esValido(String valor) {
         return (valor != null);
     }
 }

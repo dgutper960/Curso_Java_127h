@@ -2,6 +2,7 @@ package POO_ClasesAbstractas.form;
 
 import POO_ClasesAbstractas.elementos.*;
 import POO_ClasesAbstractas.elementos.select.Option;
+import POO_ClasesAbstractas.form.validador.*;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -24,11 +25,18 @@ public class Principal {
          *
          * Para este ejemplo, instanciaremos las clases hija de ElementoForm */
 
-        /** Instancias de InputForm para generar los campos del formulario */
+        /** Instancias de InputForm para generar los campos del formulario
+         * --> Añadimos los Validadores pertinentes */
         InputForm username = new InputForm("username"); // nombre campo / tipo por defecto
+        username.addValidador(new ValidarNotNull());
         InputForm password = new InputForm("clave", "password"); // nombre campo / tipo de elemento HTML
+        password.addValidador(new ValidarCampoRequerido());
+        password.addValidador(new ValidarLongitud(8, Integer.MAX_VALUE));
         InputForm email = new InputForm("email", "email"); // nombre campo / tipo de elemento HTML
+        email.addValidador(new ValidarForamatoEmail());
         InputForm edad = new InputForm("edad", "number"); // nombre campo / tipo de elemento HTML
+        edad.addValidador(new ValidarCampoNumerico());
+        edad.addValidador(new ValidarLongitud(2, 3)); // no menores de 10 años, no mayores de 999 años (mejorar en implementación)
 
         /** Creamos un textarea **/
         TextAreaForm experiencia = new TextAreaForm("experiencia", 5, 9);
@@ -45,6 +53,8 @@ public class Principal {
         .addOption(new Option("PHP", "4"))
         .addOption(new Option("RUST", "5"))
         .addOption(new Option("GO", "6"));
+        // debe seleccionarse un lenguaje de forma obligatoria
+        lenguajes.addValidador(new ValidarNotNull());
 
         // AÑADIMOS VALORES A LOS CAMPOS
         username.setValor("Davilillo-Slash");
@@ -97,6 +107,8 @@ public class Principal {
             System.out.println("</br>");
         });
 
+        /** Iteramos sobre las validaciones */
+ // TODO ERROR DE IMPLEMENTACIÓN EN VALIADORES (clases 199 -> 205)
 
     }
 }

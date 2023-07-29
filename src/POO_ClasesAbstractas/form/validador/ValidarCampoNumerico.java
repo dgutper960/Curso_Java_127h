@@ -18,7 +18,7 @@ public class ValidarCampoNumerico extends Validador{
 
     // en este caso usaremos un bloque try/catch
     @Override
-    boolean esValido(String valor) {
+    public boolean esValido(String valor) {
         try {
             Integer.parseInt(valor); // Si no puede realizar el cast, no es un dato válido
             return true;

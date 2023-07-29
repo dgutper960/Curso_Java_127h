@@ -39,9 +39,9 @@ public class ValidarLongitud extends Validador{
     }
 
     @Override
-    boolean esValido(String valor) {
+    public boolean esValido(String valor) {
         // editamos el mensaje para dar los valores mínimos y máximos en el String
-        this.mensaje = String.format(this.mensaje, this.min, this.max); // %d = digito, deben estar en orden
+        this.mensaje = String.format(mensaje, min, max); // %d = digito, deben estar en orden
         // evitamos el NullPointException
         if (valor == null){
             return true;

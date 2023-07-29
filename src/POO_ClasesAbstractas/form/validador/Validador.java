@@ -13,5 +13,5 @@ abstract public class Validador {
     abstract public void setMensaje(String mensaje);
 
     // método abstracto para validar
-    abstract boolean esValido(String valor);
+    abstract public boolean esValido(String valor);
 }
