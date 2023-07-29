@@ -39,6 +39,7 @@ public class SelectForm extends ElementoForm{
                     .append("'");
             if (opcion.isSelected()) {
                 sb.append(" selected"); // BANDERA SI OPCIÓN SELECCIONADA
+                this.valor = opcion.getValor(); // PARA MOSTRAR EL VALOR DE LA OPCIÓN SELECCIONADA
             }
             sb.append(">").append(opcion.getNombre())
                     .append("</option>"); // CERRAMOS OPTION

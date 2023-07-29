@@ -10,8 +10,8 @@ public class Option {
 
     public Option(String nombre, String valor) {
         this();
-        this.nombre = nombre;
         this.valor = valor;
+        this.nombre = nombre;
     }
 
     public String getNombre() {
