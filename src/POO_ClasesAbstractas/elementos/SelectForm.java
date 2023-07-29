@@ -35,16 +35,16 @@ public class SelectForm extends ElementoForm{
         // ITERAMOS SOBRE EL ELEMENTO SELECT Y MOSTRAR LAS OPCIONES
         for (Option opcion: opciones){
             sb.append("\n<option value='") // ABRIMOS OPTION
-                    .append(opcion.getValor())
+                    .append(opcion.getId())
                     .append("'");
             if (opcion.isSelected()) {
                 sb.append(" selected"); // BANDERA SI OPCIÓN SELECCIONADA
-                this.valor = opcion.getValor(); // PARA MOSTRAR EL VALOR DE LA OPCIÓN SELECCIONADA
+                this.valor = opcion.getId(); // PARA MOSTRAR EL VALOR DE LA OPCIÓN SELECCIONADA
             }
             sb.append(">").append(opcion.getNombre())
                     .append("</option>"); // CERRAMOS OPTION
         }
-        sb.append("</select>"); //CERRAMOS SELECT
+        sb.append("\n</select>"); //CERRAMOS SELECT
         return sb.toString(); // RETORNO sb.toString()
     }
 }

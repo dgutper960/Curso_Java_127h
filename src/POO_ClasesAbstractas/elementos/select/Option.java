@@ -1,16 +1,18 @@
 package POO_ClasesAbstractas.elementos.select;
 
 public class Option {
+
+    private String id;
+
     private String nombre;
-    private String valor;
     private boolean selected;
 
     public Option() {
     }
 
-    public Option(String nombre, String valor) {
+    public Option(String nombre, String id) {
         this();
-        this.valor = valor;
+        this.id = id;
         this.nombre = nombre;
     }
 
@@ -22,19 +24,26 @@ public class Option {
         this.nombre = nombre;
     }
 
-    public String getValor() {
-        return valor;
+    public String getId() {
+        return id;
     }
 
-    public void setValor(String valor) {
-        this.valor = valor;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public boolean isSelected() {
         return selected;
     }
 
-    public void setSelected(boolean selected) {
+    public Option setSelected(boolean selected) {
+        this.selected = selected;
+        return this;
+    }/**
+     SOBRECARGAMOS EL SET
+     PARA DIFERENTES IMPLEMENTACIONES EN EL MAIN
+     **/
+    public void setSelected() {
         this.selected = selected;
     }
 }
