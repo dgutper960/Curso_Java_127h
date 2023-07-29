@@ -34,11 +34,11 @@ public class Main {
 
         /** Creamos libro y añadimos páginas */
         Libro poemario = new Libro("Autores Generación del 27", "Escribir en tiempos revueltos", POESIA);
-        poemario.addPagina(new Pagina("Poema 1"));
-        poemario.addPagina(new Pagina("Poema 2"));
-        poemario.addPagina(new Pagina("Poema 3"));
-        poemario.addPagina(new Pagina("Poema 4"));
-        poemario.addPagina(new Pagina("Poema 5"));
+        poemario.addPagina(new Pagina("Poema 1"))
+        .addPagina(new Pagina("Poema 2"))
+        .addPagina(new Pagina("Poema 3"))
+        .addPagina(new Pagina("Poema 4"))
+        .addPagina(new Pagina("Poema 5"));
 
         /** AL USAR EL MÉTODO IMPRIMIR NOS DA ERROR
          * PORQUE LIBRO NO HEREDA DE LA CLASE ABSTRACTA Y POR LO TANTO NO CUMPLE EL CONTRATO
