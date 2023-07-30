@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 /** Esta clase implementa CrudRepositorio, OrdenableRepositorio y PaginarClientes
  * --> Damos forma a sus métodos **/
-public class ClientesListRepositorio implements CrudRepositorio, OrdenableRepositorio, PaginarClientes{
+public class ClientesListRepositorio implements Unificable{
 
     /** Creamos un atributo List<Cliente> para almacenar y operar con los datos */
     private List<Cliente> dataSource;
@@ -27,7 +27,9 @@ public class ClientesListRepositorio implements CrudRepositorio, OrdenableReposi
     // Tiramos de sort() e implementamos al vuelo, usamos expresión LAMBDA
     @Override
     public List<Cliente> listarClientes(String campo, Orden orden) {
-        dataSource.sort((a, b) -> {
+        // PARA QUE AL ORDENAR NO SE MODIFIQUE EL ORIGINAL CREAMOS UN NUEVO ArrayList
+        List<Cliente> listaOrdenada = new ArrayList<>(this.dataSource);
+        listaOrdenada.sort((a, b) -> {
                 int resultado = 0;
                 if (orden == Orden.ASC){
                     switch (campo){
@@ -50,8 +52,8 @@ public class ClientesListRepositorio implements CrudRepositorio, OrdenableReposi
                 }
                 return resultado;
             });
-        return dataSource;
-    }
+        return listaOrdenada; // EVITAMOS QUE SE MODIFIQUE EL ORIGINAL AL EMPLEAR ESTE MÉTODO
+    } //TODO ESTE MÉTODO SE PUEDE OPTIMIZAR (clase 219)
 
     // Tiramos del método subList()
     @Override
@@ -94,4 +96,8 @@ public class ClientesListRepositorio implements CrudRepositorio, OrdenableReposi
         dataSource.remove(this.mostrarClientePorID(id));
     }
 
+    @Override
+    public int contar() {
+        return this.dataSource.size();
+    }
 }

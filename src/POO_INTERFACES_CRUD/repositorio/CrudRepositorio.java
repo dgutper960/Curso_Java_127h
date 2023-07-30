@@ -24,4 +24,6 @@ public interface CrudRepositorio {
 
     // 5. Eliminar cliente
     void eliminarClientePorID(Integer id);
+
+    int contar();
 }

@@ -50,16 +50,20 @@ public class Principal {
         repositorio.editarCliente(id3); // DATO DE ENTRADA ID
         // LISTAMOS TODOS LOS CLIENTES PARA VER SI LO HEMOS HECHO BIEN
         clientes.forEach(System.out::println);
-        // VEMOS QUE ESTÁN DESORDENADOS
-        System.out.println("===== Lista Orden Asc por id =====");
-        List<Cliente> ordenAsc2 = ((OrdenableRepositorio)repositorio).listarClientes("id", Orden.ASC);
-        ordenAsc2.forEach(System.out::println);
+//        ** CORREGIDO EN EL CÓDIGO -->// VEMOS QUE ESTÁN DESORDENADOS
+//        System.out.println("===== Lista Orden Asc por id =====");
+//        List<Cliente> ordenAsc2 = ((OrdenableRepositorio)repositorio).listarClientes("id", Orden.ASC);
+//        ordenAsc2.forEach(System.out::println);
 
         /** BORRAMOS A LOS FAMOSOS */
         System.out.println("===== Borramos los Clientes con id 3 y 4 =====");
         repositorio.eliminarClientePorID(4);
         repositorio.eliminarClientePorID(3);
         clientes.forEach(System.out::println);
+
+        /** USAMOS EL MÉTODO DE CONTABLE **/
+        System.out.println("===== Obtenemos el Total de Clientes =====");
+        System.out.println(repositorio.contar());
 
 
 
