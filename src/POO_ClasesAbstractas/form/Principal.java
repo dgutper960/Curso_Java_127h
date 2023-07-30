@@ -108,6 +108,12 @@ public class Principal {
         });
 
         /** Iteramos sobre las validaciones */
+        elementos.forEach(elemento -> {
+            if (!elemento.esValido()){
+                System.out.println(elemento.getErrores());
+            }
+        });
+
  // TODO ERROR DE IMPLEMENTACIÓN EN VALIADORES (clases 199 -> 205)
 
     }

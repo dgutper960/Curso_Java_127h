@@ -14,14 +14,17 @@ abstract public class ElementoForm {
     private List<Validador> validadores; // lista de validadores
     private  List<String> errores; // lista para almacenar posibles errores
 
-    public ElementoForm() {
-        this.validadores = new ArrayList<>();
-        this.errores = new ArrayList<>();
-    }
+
     //el nombre solo entra por constructor
     public ElementoForm(String nombre) {
         this();
         this.nombre = nombre;
+        this.validadores = new ArrayList<>();
+        this.errores = new ArrayList<>();
+    }
+    public ElementoForm() {
+        this.validadores = new ArrayList<>();
+        this.errores = new ArrayList<>();
     }
     //el valor solo entra por set
     public void setValor(String valor) {
@@ -42,7 +45,7 @@ abstract public class ElementoForm {
 
     // Pasamos el valor por la Lista ve Validadores con un foreach
     public boolean esValido() {
-        for (Validador v : validadores) {
+        for (Validador v : this.validadores) {
             if (!v.esValido(valor)) { // si uno no se cumple, se añade el respectivo mensaje a la lista de errores
                 this.errores.add(v.getMensaje());
                 return false;

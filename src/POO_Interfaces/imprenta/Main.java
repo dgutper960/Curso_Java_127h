@@ -46,10 +46,28 @@ public class Main {
          * --> Una vez hecho lo anterior, ya podemos usar imprimir() con un objeto Libro **/
         imprimir(poemario);
 
+        System.out.println("===============================================");
+
+        /** Usamos el método estático de la interfaz */
+        Imprimible.imprimirStatic(informe);
+
+        /** Imprimimos lo constante de Imprimible **/
+        System.out.println(Imprimible.TEXTO_POR_DEFECTO);
+
+        /** Implementamos clase anónima de Imprimible al vuelo **/
+        imprimir(new Imprimible() {
+            @Override
+            public String imprimir() {
+                return "Texto implementado para clase anónima";
+            }
+        });
+        // LO DE ARRIBA EN EXPRESIÓN LAMBDA QUEDA ASÍ:
+        imprimir(() -> "Texto implementado para clase anónima");
     }
 
     /** Cambiamos la entrada del método para que todos los elementos sean del tipo Imprimible **/
     public static void imprimir(Imprimible imprimible){
         System.out.println(imprimible.imprimir());
-    }
+    } /** PODRÍAMOS HABER DEFINIDO ESTE MÉTODO COMO ESTÁTICO EN IMPRIMIBLE
+     Y NOS AHORRAMOS ESTE PASO EN LOS MAIN DE CADA IMPLEMENTACIÓN **/
 }

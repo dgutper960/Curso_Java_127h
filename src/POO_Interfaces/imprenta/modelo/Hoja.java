@@ -9,4 +9,5 @@ abstract public class Hoja implements Imprimible{
     }
 
     public abstract String imprimir();
+
 }
