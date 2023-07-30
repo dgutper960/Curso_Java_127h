@@ -3,7 +3,6 @@ package POO_INTERFACES_CRUD.repositorio;
 import POO_INTERFACES_CRUD.modelo.Cliente;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 /** Esta clase implementa CrudRepositorio, OrdenableRepositorio y PaginarClientes
  * --> Damos forma a sus métodos **/
@@ -13,9 +12,10 @@ public class ClientesListRepositorio implements CrudRepositorio, OrdenableReposi
     private List<Cliente> dataSource;
 
     /** Inicializamos el ArrayList en un constructor vacío */
-    ClientesListRepositorio(){
+    public ClientesListRepositorio(){
         this.dataSource = new ArrayList<>();
     }
+
 
     /** Damos implementación a los métodos */
     // retornamos el dataSource
@@ -56,7 +56,7 @@ public class ClientesListRepositorio implements CrudRepositorio, OrdenableReposi
     // Tiramos del método subList()
     @Override
     public List<Cliente> listarClientes(int desde, int hasta) {
-        return dataSource.subList(desde, hasta);
+        return dataSource.subList(desde, hasta); // TOMA EL ÍNDICE COMO VALOR
     }
 
     // Iteramos y comparamos id
@@ -64,7 +64,8 @@ public class ClientesListRepositorio implements CrudRepositorio, OrdenableReposi
     public Cliente mostrarClientePorID(Integer id) {
         Cliente buscado = null;
         for (Cliente cliente: dataSource){
-            if (cliente.getId().equals(id)){
+            // validamos que algún id no sea null y que id sean iguales
+            if (cliente.getId()!=null && cliente.getId().equals(id)){
                 buscado = cliente;
                 break;
             }

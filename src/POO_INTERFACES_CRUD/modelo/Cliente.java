@@ -42,6 +42,10 @@ public class Cliente {
         this.apellidos = apellidos;
     }
 
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "\nCliente id=" + id +
