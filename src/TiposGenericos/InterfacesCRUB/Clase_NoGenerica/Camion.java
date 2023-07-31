@@ -1,4 +1,4 @@
-package TiposGenericos.InterfacesCRUB.Clase_Generica;
+package TiposGenericos.InterfacesCRUB.Clase_NoGenerica;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -18,8 +18,7 @@ public class Camion implements Iterable{
 
     //método add
     public Camion addObjeto(Object objeto){
-        // EL PROFESOR PUSO >= EN EL IF
-        if (this.objetos.size() < maxElementos){
+        if (this.objetos.size() <= maxElementos){
             this.objetos.add(objeto);
             return this;
         } else {

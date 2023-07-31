@@ -1,4 +1,4 @@
-package TiposGenericos.InterfacesCRUB.Clase_Generica;
+package TiposGenericos.InterfacesCRUB.Clase_NoGenerica;
 
 public class Automovil {
 
