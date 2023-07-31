@@ -40,13 +40,25 @@ public class PrincipalGenericos {
         Cliente[] arrayClientes = {
                 new Cliente("Sonia", "Martinez"),
                 new Cliente("Victor", "Nunez"),
+                new Cliente("Javi", "Romero")
         };
         /** y creamos arrays de lo que sea **/
         Integer[] arrayNumeros = {1,2,3,4,5,15, 20, 25};
 
         List<Cliente> listaClientes = genericArrayToList(arrayClientes);
+        listaClientes.forEach(System.out::println); // imprimimos la lista de clientes
 
         List<Integer> listaNumeros = genericArrayToList(arrayNumeros);
+        listaNumeros.forEach(System.out::println);
+
+        /** Creamos una lista con dos arreglos de diferentes tipos, va a usar el método sobrecargado **/
+        List<String> nombres = genericArrayToList( // usamos directamente el método e inicializamos al vuelo
+                new String[]{"Bea", "Monica", "Lucía", "Antonio", "Luis", "Silvia"}, // es tomado como genérico T y se crea lista
+                new Integer[]{30, 78, 19, 42, 99, 16, 98, 11, 43, 28} // es tomado como genérico G y se imprime
+        );
+        //imprimimos la lista creada
+        System.out.println("===== imprime lista creada con método sobrecargado =====");
+        nombres.forEach(System.out::println);
 
     }
     /**
@@ -61,7 +73,18 @@ public class PrincipalGenericos {
      * Poe eso, este otro sería bastante más reutilizable */
     // la letra puede ser cualquiera, pero se suele usar la T para listas
     public static <T> List<T> genericArrayToList(T[] cli){
+
         return Arrays.asList(cli);
+    }
+
+    /** Podemos tener métodos que admitan y devuelvan genéricos de dos tipos
+     * vamos a sobrecargar el método de arriba para ver un ejemplo **/
+    public static <T, G> List<T> genericArrayToList(T[] t, G[] g){
+        System.out.println("===== método sobrecargado imprime G =====");
+        for (G elemento: g){ // el tipo G lo va a imprimir
+            System.out.println(elemento);
+        }
+        return Arrays.asList(t); // el tipo T lo va a pasar a lista
     }
 
 }
