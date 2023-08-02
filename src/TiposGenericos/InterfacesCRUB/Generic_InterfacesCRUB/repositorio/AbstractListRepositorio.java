@@ -1,12 +1,12 @@
 package TiposGenericos.InterfacesCRUB.Generic_InterfacesCRUB.repositorio;
 
-import TiposGenericos.InterfacesCRUB.modelo.Cliente;
+import TiposGenericos.InterfacesCRUB.Generic_InterfacesCRUB.modelo.BaseEntity;
 
 import java.util.ArrayList;
 import java.util.List;
 /** Esta clase implementa CrudRepositorio, OrdenableRepositorio y PaginarClientes
  * --> Damos forma a sus métodos **/
-public abstract class AbstractListRepositorio<T> implements Unificable<T> {
+public abstract class AbstractListRepositorio<T extends BaseEntity> implements Unificable<T> {
 
     /** Creamos un atributo List<Cliente> para almacenar y operar con los datos */
     protected List<T> dataSource;
@@ -62,18 +62,21 @@ public abstract class AbstractListRepositorio<T> implements Unificable<T> {
     }
 
     // Iteramos y comparamos id
-//    @Override
-//    public Cliente mostrarClientePorID(Integer id) {
-//        Cliente buscado = null;
-//        for (Cliente cliente: dataSource){
-//            // validamos que algún id no sea null y que id sean iguales
-//            if (cliente.getId()!=null && cliente.getId().equals(id)){
-//                buscado = cliente;
-//                break;
-//            }
-//        }
-//        return buscado;
-//    }
+
+    /*** Gracias a la jerarquía de herencia entre la clase Abstracta, Cliente y BaseEntity
+     * Podemos usar los getters de Cliente en este método con salida de tipo genérico ***/
+    @Override
+    public T mostrarClientePorID(Integer id) {
+        T buscado = null;
+        for (T cliente: dataSource){
+            // validamos que algún id no sea null y que id sean iguales
+            if (cliente.getId()!=null && cliente.getId().equals(id)){
+                buscado = cliente;
+                break;
+            }
+        }
+        return buscado;
+    }
 
     // Usamos el método .add() de ArrayList
     @Override
