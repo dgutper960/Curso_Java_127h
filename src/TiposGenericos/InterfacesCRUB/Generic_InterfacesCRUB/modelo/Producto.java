@@ -4,9 +4,9 @@ package TiposGenericos.InterfacesCRUB.Generic_InterfacesCRUB.modelo;
 public class Producto extends BaseEntity {
     /** definimos los atributos propios ***/
     private String descripcion;
-    private double precio;
+    private Double precio;
 
-    public Producto(String descripcion, double precio) {
+    public Producto(String descripcion, Double precio) {
         super();
         this.descripcion = descripcion;
         this.precio = precio;
@@ -20,7 +20,7 @@ public class Producto extends BaseEntity {
         this.descripcion = descripcion;
     }
 
-    public double getPrecio() {
+    public Double getPrecio() {
         return precio;
     }
 

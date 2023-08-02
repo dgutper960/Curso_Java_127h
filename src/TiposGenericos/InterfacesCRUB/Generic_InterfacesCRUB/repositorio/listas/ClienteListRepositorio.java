@@ -1,6 +1,8 @@
-package TiposGenericos.InterfacesCRUB.Generic_InterfacesCRUB.repositorio;
+package TiposGenericos.InterfacesCRUB.Generic_InterfacesCRUB.repositorio.listas;
 
 import TiposGenericos.InterfacesCRUB.Generic_InterfacesCRUB.modelo.Cliente;
+import TiposGenericos.InterfacesCRUB.Generic_InterfacesCRUB.repositorio.AbstractListRepositorio;
+import TiposGenericos.InterfacesCRUB.Generic_InterfacesCRUB.repositorio.Orden;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -63,10 +65,10 @@ public class ClienteListRepositorio extends AbstractListRepositorio<Cliente> {
 
     // Modificamos mediante set
     @Override
-    public void editarCliente(Cliente cliente) {
-        Cliente c = this.mostrarClientePorID(cliente.getId());
-        c.setNombre(cliente.getNombre());
-        c.setApellidos(cliente.getApellidos());
+    public void editarCliente(Cliente objeto) {
+        Cliente c = this.mostrarClientePorID(objeto.getId());
+        c.setNombre(objeto.getNombre());
+        c.setApellidos(objeto.getApellidos());
     }
 
 }

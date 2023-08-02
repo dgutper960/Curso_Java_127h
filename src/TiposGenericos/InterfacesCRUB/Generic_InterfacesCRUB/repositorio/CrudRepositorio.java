@@ -14,11 +14,12 @@ public interface CrudRepositorio<T>{
     // 2. Obtener cliente mediante id
     T mostrarClientePorID(Integer id);
 
-    // 3. Insertar cliente
-    void insertarCliente(T cliente);
+    // 3. Insertar objeto
+    void insertarCliente(T objeto);
 
-    // 4. Editar cliente
-    void editarCliente(T cliente);
+    // 4. Editar objeto
+    void editarCliente(T objeto);
+
 
     // 5. Eliminar cliente
     void eliminarClientePorID(Integer id);
