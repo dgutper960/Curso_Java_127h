@@ -1,5 +1,6 @@
 package ManejoDeErrores.EnProyectoRepositorioCRUD.listas;
 
+import ManejoDeErrores.EnProyectoRepositorioCRUD.excepciones.LecturaAccesoDatoException;
 import ManejoDeErrores.EnProyectoRepositorioCRUD.modelo.Producto;
 import ManejoDeErrores.EnProyectoRepositorioCRUD.repositorio.AbstractListRepositorio;
 import ManejoDeErrores.EnProyectoRepositorioCRUD.repositorio.Orden;
@@ -9,7 +10,7 @@ import java.util.List;
 
 public class ProductosListaRepositorio extends AbstractListRepositorio<Producto> {
     @Override
-    public void editarCliente(Producto objeto) {
+    public void editarCliente(Producto objeto) throws LecturaAccesoDatoException {
         Producto p = this.mostrarClientePorID(objeto.getId());
         p.setDescripcion(p.getDescripcion());
         p.setPrecio(p.getPrecio());

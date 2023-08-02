@@ -1,5 +1,6 @@
 package ManejoDeErrores.EnProyectoRepositorioCRUD.listas;
 
+import ManejoDeErrores.EnProyectoRepositorioCRUD.excepciones.LecturaAccesoDatoException;
 import ManejoDeErrores.EnProyectoRepositorioCRUD.modelo.Cliente;
 import ManejoDeErrores.EnProyectoRepositorioCRUD.repositorio.AbstractListRepositorio;
 import ManejoDeErrores.EnProyectoRepositorioCRUD.repositorio.Orden;
@@ -45,7 +46,7 @@ public class ClienteListRepositorio extends AbstractListRepositorio<Cliente> {
 
     // Iteramos y comparamos id
     @Override
-    public Cliente mostrarClientePorID(Integer id) {
+    public Cliente mostrarClientePorID(Integer id) throws LecturaAccesoDatoException {
         Cliente buscado = null;
         for (Cliente cliente: dataSource){
             // validamos que algún id no sea null y que id sean iguales
@@ -65,7 +66,7 @@ public class ClienteListRepositorio extends AbstractListRepositorio<Cliente> {
 
     // Modificamos mediante set
     @Override
-    public void editarCliente(Cliente objeto) {
+    public void editarCliente(Cliente objeto) throws LecturaAccesoDatoException {
         Cliente c = this.mostrarClientePorID(objeto.getId());
         c.setNombre(objeto.getNombre());
         c.setApellidos(objeto.getApellidos());

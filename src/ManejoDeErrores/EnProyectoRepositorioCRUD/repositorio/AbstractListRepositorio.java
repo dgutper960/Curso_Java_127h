@@ -67,7 +67,7 @@ public abstract class AbstractListRepositorio<T extends BaseEntity> implements U
     /*** Gracias a la jerarquía de herencia entre la clase Abstracta, Cliente y BaseEntity
      * Podemos usar los getters de Cliente en este método con salida de tipo genérico ***/
     @Override
-    public T mostrarClientePorID(Integer id) {
+    public T mostrarClientePorID(Integer id) throws LecturaAccesoDatoException{ /** Debe ser implementado Por la Interface */
         if (id == null || id <= 0){
             throw new LecturaAccesoDatoException("El id debe ser mayor a 0");
         }
@@ -99,7 +99,7 @@ public abstract class AbstractListRepositorio<T extends BaseEntity> implements U
 
     // Para este método vamos a necesitar .equals implementado en Cliente
     @Override
-    public void eliminarClientePorID(Integer id) {
+    public void eliminarClientePorID(Integer id) throws LecturaAccesoDatoException {
         dataSource.remove(this.mostrarClientePorID(id));
     }
 
