@@ -1,6 +1,7 @@
 package ManejoDeErrores.EnProyectoRepositorioCRUD;
 
 import ManejoDeErrores.EnProyectoRepositorioCRUD.excepciones.AccesoDatosException;
+import ManejoDeErrores.EnProyectoRepositorioCRUD.excepciones.EscrituraDatosException;
 import ManejoDeErrores.EnProyectoRepositorioCRUD.excepciones.LecturaDatosException;
 import ManejoDeErrores.EnProyectoRepositorioCRUD.listas.ClienteListRepositorio;
 import ManejoDeErrores.EnProyectoRepositorioCRUD.modelo.Cliente;
@@ -69,7 +70,14 @@ public class PrincipalCliente {
             System.out.println("===== Obtenemos el Total de Clientes =====");
             System.out.println(repositorio.contar());
 
+            /** Buscamos por id */
+            System.out.println("===== Obtenemos Cliente por id =====");
+            System.out.println(repositorio.mostrarClientePorID(2));
+
         }catch (LecturaDatosException e){ // 1º DEBEMOS MANEJAR DESDE EL MÁS ESPECÍFICO, AL MÁS GENÉRICO
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        }catch (EscrituraDatosException e) { // nº DEBEMOS MANEJAR DESDE EL MÁS ESPECÍFICO, AL MÁS GENÉRICO
             System.out.println(e.getMessage());
             e.printStackTrace();
         }catch (AccesoDatosException e){ // nº DEBEMOS IR DEL MÁS ESPECÍFICO AL MÁS GENÉRICO

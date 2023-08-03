@@ -1,5 +1,6 @@
 package ManejoDeErrores.EnProyectoRepositorioCRUD.repositorio;
 
+import ManejoDeErrores.EnProyectoRepositorioCRUD.excepciones.EscrituraDatosException;
 import ManejoDeErrores.EnProyectoRepositorioCRUD.excepciones.LecturaDatosException;
 import ManejoDeErrores.EnProyectoRepositorioCRUD.modelo.BaseEntity;
 
@@ -79,12 +80,22 @@ public abstract class AbstractListRepositorio<T extends BaseEntity> implements U
                 break;
             }
         }
+        if (buscado == null){
+            throw new LecturaDatosException("El id buscado '"+id+"' no existe");
+        }
         return buscado;
     }
 
     // Usamos el método .add() de ArrayList
     @Override
-    public void insertarCliente(T t) {
+    public void insertarCliente(T t) throws EscrituraDatosException {
+        if (t == null){
+            throw new EscrituraDatosException("No se puede añadir con id null");
+        }
+        if (this.dataSource.contains(t)){
+            throw new EscrituraDatosException("OPERACIÓN NO PERMITIDA.\nEl cliente que intenta insertar ya existe"+
+                    "\nid "+t.getId()+" no puede ser duplicado");
+        }
         this.dataSource.add(t);
     }
 

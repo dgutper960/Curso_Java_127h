@@ -1,5 +1,6 @@
 package ManejoDeErrores.EnProyectoRepositorioCRUD.listas;
 
+import ManejoDeErrores.EnProyectoRepositorioCRUD.excepciones.LecturaDatosException;
 import ManejoDeErrores.EnProyectoRepositorioCRUD.modelo.Cliente;
 import ManejoDeErrores.EnProyectoRepositorioCRUD.repositorio.AbstractListRepositorio;
 import ManejoDeErrores.EnProyectoRepositorioCRUD.repositorio.Orden;
@@ -44,28 +45,33 @@ public class ClienteListRepositorio extends AbstractListRepositorio<Cliente> {
     } //TODO ESTE MÉTODO SE PUEDE OPTIMIZAR (clase 219)
 
     // Iteramos y comparamos id
-    @Override
-    public Cliente mostrarClientePorID(Integer id) {
-        Cliente buscado = null;
-        for (Cliente cliente: dataSource){
-            // validamos que algún id no sea null y que id sean iguales
-            if (cliente.getId()!=null && cliente.getId().equals(id)){
-                buscado = cliente;
-                break;
-            }
-        }
-        return buscado;
-    }
-
+//    @Override
+//    public Cliente mostrarClientePorID(Integer id) throws LecturaDatosException {
+//        if (id == null || id <= 0){
+//            throw new LecturaDatosException("El id debe ser mayor de 0");
+//        }
+//        Cliente buscado = null;
+//        for (Cliente cliente: dataSource){
+//            // validamos que algún id no sea null y que id sean iguales
+//            if (cliente.getId()!=null && cliente.getId().equals(id)){
+//                buscado = cliente;
+//                break;
+//            }
+//        }
+//        if (buscado == null){
+//            throw new LecturaDatosException("El id buscado '"+id+"' no existe");
+//        }
+//        return buscado;
+//    }
     // Usamos el método .add() de ArrayList
-    @Override
-    public void insertarCliente(Cliente c) {
-        this.dataSource.add(c);
-    }
+//    @Override
+//    public void insertarCliente(Cliente c) {
+//        this.dataSource.add(c);
+//    }
 
     // Modificamos mediante set
     @Override
-    public void editarCliente(Cliente objeto) {
+    public void editarCliente(Cliente objeto) throws LecturaDatosException {
         Cliente c = this.mostrarClientePorID(objeto.getId());
         c.setNombre(objeto.getNombre());
         c.setApellidos(objeto.getApellidos());
