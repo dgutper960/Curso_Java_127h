@@ -1,4 +1,4 @@
-package API_Collection.HashSet;
+package API_Collection.Set;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -9,7 +9,7 @@ public class HashSetAgregar {
     public static void main(String[] args) {
 
 
-        /** Vamos a crear una colección HashSet de String */
+        /** Vamos a crear una colección Set de String */
         HashSet<String> hashSet = new HashSet<>();
         // AGREGAMOS UN ELEMENTO
         hashSet.add("1. Manolito el Egipcio");
@@ -17,7 +17,7 @@ public class HashSetAgregar {
         hashSet.add("3. Rocía Muñoz");
         hashSet.add("4. Ruiz Castro");
         hashSet.add("5. Federico Milan");
-        // IMPRIMIMOS EL HashSet directamente
+        // IMPRIMIMOS EL Set directamente
         System.out.println(hashSet);
         /** VEMOS QUE EL SET NO ES ORDENADO
          * --> TAMPOCO SE PUEDE ORDENAR DE FORMA EXPLÍCITA **/

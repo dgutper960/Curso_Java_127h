@@ -1,4 +1,4 @@
-package API_Collection.HashSet;
+package API_Collection.Set;
 
 import java.util.HashSet;
 import java.util.Set;
