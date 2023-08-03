@@ -1,10 +1,6 @@
-package API_Collection.Set.EjemploSetComparable.set;
+package API_Collection.Set.EjemploTreeSetComparable;
 
-import API_Collection.Set.EjemploSetComparable.modelo.Alumno;
-
-import java.util.Comparator;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class TreeSetComparable {
     public static void main(String[] args) {
@@ -15,9 +11,12 @@ public class TreeSetComparable {
         alumnos.add(new Alumno("Martin", 7.8));
         alumnos.add(new Alumno("María", 9.5));
         alumnos.add(new Alumno("Lucía", 5.8));
-        alumnos.add(new Alumno("Vero", 6.9));
-        alumnos.add(new Alumno("Tere", 4.95));
+        alumnos.add(new Alumno("Vero", 6.9)); // nombre repetido
+        alumnos.add(new Alumno("Vero", 9.6)); // nombre repetido (se queda fuera si ordenación por nombre)
+        alumnos.add(new Alumno("Tere", 4.95)); // nota repetida
+        alumnos.add(new Alumno("Risco", 4.95)); // nota repetida (se queda fuera si ordenación por nota)
         alumnos.add(new Alumno("Felipe", 0d));
+        /** En TreeSet si repetimos uno de los atributos de ordenación lo va a tomar como duplicado **/
 
         /** Si imprimimos, nos va a dar error,
          * ya que los elementos de TreeSet deben implementar Comparable */

@@ -1,4 +1,6 @@
-package API_Collection.Set.EjemploSetComparable.modelo;
+package API_Collection.Set.EjemploTreeSetComparable;
+
+import java.util.Objects;
 
 public class Alumno implements Comparable<Alumno> {
     private String nombre;
@@ -35,6 +37,19 @@ public class Alumno implements Comparable<Alumno> {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Alumno alumno = (Alumno) o;
+        return Objects.equals(nombre, alumno.nombre) && Objects.equals(nota, alumno.nota);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nombre, nota);
+    }
+
+    @Override
     public int compareTo(Alumno o) {
         // Si el campo pudiese ser null, hay que evitar el NullPointException
         if (this.nota == null){
@@ -43,4 +58,6 @@ public class Alumno implements Comparable<Alumno> {
         // Si nota es de tipo primitivo hay que pasarlo a Referencia de alguna forma
         return this.nota.compareTo(o.nota);
     }
+
+
 }
