@@ -1,4 +1,6 @@
-package API_Collection.Set.IterandoSet;
+package API_Collection.IterandoCollection;
+
+import API_Collection.Set.GestionarDuplicados.Alumno;
 
 import java.util.*;
 
