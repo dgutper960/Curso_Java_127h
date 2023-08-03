@@ -1,5 +1,8 @@
 package ManejoDeErrores.EnProyectoRepositorioCRUD.repositorio;
 
+import ManejoDeErrores.EnProyectoRepositorioCRUD.excepciones.AccesoDatosException;
+import ManejoDeErrores.EnProyectoRepositorioCRUD.excepciones.LecturaDatosException;
+
 import java.util.List;
 
 public interface CrudRepositorio<T>{
@@ -10,7 +13,7 @@ public interface CrudRepositorio<T>{
     List<T> listarClientes();
 
     // 2. Obtener cliente mediante id
-    T mostrarClientePorID(Integer id);
+    T mostrarClientePorID(Integer id) throws AccesoDatosException;
 
     // 3. Insertar objeto
     void insertarCliente(T objeto);
@@ -20,7 +23,7 @@ public interface CrudRepositorio<T>{
 
 
     // 5. Eliminar cliente
-    void eliminarClientePorID(Integer id);
+    void eliminarClientePorID(Integer id) throws AccesoDatosException;
 
     int contar();
 }

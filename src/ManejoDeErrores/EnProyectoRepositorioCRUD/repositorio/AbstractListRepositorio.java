@@ -1,5 +1,6 @@
 package ManejoDeErrores.EnProyectoRepositorioCRUD.repositorio;
 
+import ManejoDeErrores.EnProyectoRepositorioCRUD.excepciones.LecturaDatosException;
 import ManejoDeErrores.EnProyectoRepositorioCRUD.modelo.BaseEntity;
 
 import java.util.ArrayList;
@@ -66,7 +67,10 @@ public abstract class AbstractListRepositorio<T extends BaseEntity> implements U
     /*** Gracias a la jerarquía de herencia entre la clase Abstracta, Cliente y BaseEntity
      * Podemos usar los getters de Cliente en este método con salida de tipo genérico ***/
     @Override
-    public T mostrarClientePorID(Integer id) {
+    public T mostrarClientePorID(Integer id) throws LecturaDatosException{
+        if (id == null || id <= 0){
+            throw new LecturaDatosException("El id debe ser mayor de 0");
+        }
         T buscado = null;
         for (T cliente: dataSource){
             // validamos que algún id no sea null y que id sean iguales
@@ -95,7 +99,7 @@ public abstract class AbstractListRepositorio<T extends BaseEntity> implements U
 
     // Para este método vamos a necesitar .equals implementado en Cliente
     @Override
-    public void eliminarClientePorID(Integer id) {
+    public void eliminarClientePorID(Integer id) throws LecturaDatosException {
         dataSource.remove(this.mostrarClientePorID(id));
     }
 
