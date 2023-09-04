@@ -82,7 +82,8 @@ public class PrincipalesMetodosHashMap {
         });
 
 
-        /** AL IGUAL QUE SET, LOS MAP NO MANTIENEN NINGÚN TIPO DE ORDEN **/
+        /** AL IGUAL QUE SET, LOS MAP NO MANTIENEN NINGÚN TIPO DE ORDEN
+         * -> Podemos tener Map ordenados con TreeMap (lo veremos en otra package) **/
 
 
     }
