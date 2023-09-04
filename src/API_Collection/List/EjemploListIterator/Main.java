@@ -1,9 +1,8 @@
-package API_Collection.Set.EjemploListIterator;
+package API_Collection.List.EjemploListIterator;
 
 import API_Collection.Set.EjemploTreeSetComparable.Alumno;
 
 import java.util.LinkedList;
-import java.util.List;
 import java.util.ListIterator;
 
 public class Main {

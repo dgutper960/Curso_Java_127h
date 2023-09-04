@@ -1,4 +1,4 @@
-package API_Collection.Set.EjemploArrayList;
+package API_Collection.List.EjemploArrayList;
 
 import API_Collection.Set.EjemploTreeSetComparable.Alumno;
 
