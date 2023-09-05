@@ -2,6 +2,8 @@ package Recursividad.ejemplo;
 
 import Recursividad.ejemplo.models.Componente;
 
+import java.util.stream.Stream;
+
 public class EjemploRecursividad {
     public static void main(String[] args) {
 
@@ -53,23 +55,34 @@ public class EjemploRecursividad {
         // CONECTAMOS LA CAJA A LOS PERIFÉRICOS
         pc.addComponente(caja)
                 .addComponente(new Componente("Monitor 144Hz LG UltraGear 2k 27"))
-                .addComponente(new Componente("Combo teclado + ratón Logitech"));;
+                .addComponente(new Componente("Combo teclado + ratón Logitech"));
 
-                metodoRecursivo(pc, 0); // el método es estático, el nivel inicia en 0
+        metodoRecursivoSINjava8(pc, 0); // el método es estático, el nivel inicia en 0
+        //metodoRecursivoCONjava8(pc, 0).forEach(c -> System.out.println("\t".repeat(c.getNivel()).getNombre));
 
     }
 
     /** Vamos a crear un método recursivo que recorra este árbol **/
-    public static void metodoRecursivo(Componente c, int nivel){ /** con los niveles lo vemos en jerarquía **/
+    public static void metodoRecursivoSINjava8(Componente c, int nivel){ /** con los niveles lo vemos en jerarquía **/
         System.out.println("\t".repeat(nivel)+c.getNombre()); // nombre del nodo padre (PC)
         // si el nodo tiene hijos los vamos a iterar
         if(c.tieneHijos()){
             for (Componente hijo: c.getHijos()){ // tomamos los hijos de cada componente (si los hay)
                 /** Para ver el árbol completo volvemos a llamar al método de forma recursiva */
-                metodoRecursivo(hijo, nivel+1); // IMPORTANTE NO PONER ++
+                metodoRecursivoSINjava8(hijo, nivel+1); // IMPORTANTE NO PONER ++
             } /** Es importante que la primera llamada al método la haga el nodo principal */
         }
     }
+
+//    public static Stream metodoRecursivoCONjava8(Componente c, int nivel){
+//        /** Para este método vamos a implementar el int nivel en la Clase Componente (getter/setter)*/
+//        // Asignamos el nivel con set
+//        c.setNivel(nivel);
+//        return Stream.concat(Stream.of(c),
+//        c.getHijos().stream().flatMap(hijo -> metodoRecursivoCONjava8(hijo, nivel + 1)));
+//
+//    }
+
 
 
 }

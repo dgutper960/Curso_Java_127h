@@ -10,13 +10,25 @@ public class Componente {
     private String nombre;
     private List<Componente> hijos;
 
+    int nivel;
+
     /** creamos el constructor e inicializamos la lista */
     public Componente(String nombre) {
         this.nombre = nombre;
         this.hijos = new ArrayList<>(); // inicializamos la lista
     }
 
+    public int getNivel() {
+        return nivel;
+    }
+
+    public void setNivel(int nivel) {
+        this.nivel = nivel;
+    }
+
     /** getters and setters */
+
+
     public String getNombre() {
         return nombre;
     }
